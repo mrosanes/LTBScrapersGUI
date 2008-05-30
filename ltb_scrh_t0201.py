@@ -7,15 +7,18 @@ from ui_scrh import Ui_SCRH
 
 SCRAPPER_NAME = 'LT-DI-SCRH-T0201'
 
-# SCRH02_MOTL
-LEFT_STEPPER = 'motor/ipapctrl/1'
-# SCRH02_MOTR
-RIGHT_STEPPER = 'motor/ipapctrl/2'
+# SCRHT02_MOTL
+LEFT_STEPPER = 'motor/ltb_ipapctrl/1'
+# SCRHT02_MOTR
+RIGHT_STEPPER = 'motor/ltb_ipapctrl/2'
 
-LEFT_ENC = 'pm/pmenc1ctrl/1'
-RIGHT_ENC = 'pm/pmenc2ctrl/1'
-GAP = 'pm/slitH02ctrl/1'
-OFFSET = 'pm/slitH02ctrl/2'
+# LT01/DI/ADC-SCR-01 Channel 0
+LEFT_ENC = 'pm/lt02_pmenchlctrl/1'
+# LT01/DI/ADC-SCR-01 Channel 1
+RIGHT_ENC = 'pm/lt02_pmenchrctrl/'
+
+GAP = 'pm/lt02_hslitctrl/1'
+OFFSET = 'pm/lt02_hslitctrl/2'
 
 class SCRH_T0201(QtGui.QMainWindow):
     

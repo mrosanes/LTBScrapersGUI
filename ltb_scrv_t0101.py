@@ -7,16 +7,18 @@ from ui_scrv import Ui_SCRV
 
 SCRAPER_NAME = 'LT-DI-SCRV-T0101'
 
-# SCRV-MOTU
-UPPER_STEPPER = 'motor/ipapctrl/3'
-# SCRV-MOTD
-LOWER_STEPPER = 'motor/ipapctrl/4'
+# SCRVT01-MOTU
+UPPER_STEPPER = 'motor/ltb_ipapctrl/3'
+# SCRVT01-MOTD
+LOWER_STEPPER = 'motor/ltb_ipapctrl/4'
 
-UPPER_ENC = 'pm/pmenc3ctrl/1'
-LOWER_ENC = 'pm/pmenc4ctrl/1'
+# LT01/DI/ADC-SCR-01 Channel 2
+UPPER_ENC = 'pm/lt01_pmencvuctrl/1'
+# LT01/DI/ADC-SCR-01 Channel 3
+LOWER_ENC = 'pm/lt01_pmencvdctrl/1'
 
-GAP = 'pm/slitV01ctrl/1'
-OFFSET = 'pm/slitV01ctrl/2'
+GAP = 'pm/lt01_vslitctrl/1'
+OFFSET = 'pm/lt01_vslitctrl/2'
 
 class SCRV_T0101(QtGui.QMainWindow):
     
