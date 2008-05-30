@@ -15,7 +15,7 @@ RIGHT_STEPPER = 'motor/ltb_ipapctrl/2'
 # LT01/DI/ADC-SCR-01 Channel 0
 LEFT_ENC = 'pm/lt02_pmenchlctrl/1'
 # LT01/DI/ADC-SCR-01 Channel 1
-RIGHT_ENC = 'pm/lt02_pmenchrctrl/'
+RIGHT_ENC = 'pm/lt02_pmenchrctrl/1'
 
 GAP = 'pm/lt02_hslitctrl/1'
 OFFSET = 'pm/lt02_hslitctrl/2'
