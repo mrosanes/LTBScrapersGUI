@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 import sys
+import PyTango
 
-from PyQt4 import QtGui
+from PyQt4 import QtGui,QtCore
 from ui_scrv import Ui_SCRV
 
 #SCRAPER_NAME = 'LT-DI-SCRV-T0101'
@@ -30,6 +31,12 @@ class SCRV_T0101(QtGui.QMainWindow):
         self.ui = Ui_SCRV()
         self.ui.setupUi(self)
 
+        # Connect ui signals
+        QtCore.QObject.connect(self.ui.upperAbort,QtCore.SIGNAL("clicked()"),self.upperAbort)
+        QtCore.QObject.connect(self.ui.lowerAbort,QtCore.SIGNAL("clicked()"),self.lowerAbort)
+        self.upperMotor = PyTango.DeviceProxy(UPPER_STEPPER)
+        self.lowerMotor = PyTango.DeviceProxy(LOWER_STEPPER)
+        
         # Connect Motors
         self.ConnectMotors()
         
@@ -47,6 +54,12 @@ class SCRV_T0101(QtGui.QMainWindow):
         self.ui.lowerEnc.setModel(LOWER_ENC)
         self.ui.gap.setModel(GAP)
         self.ui.offset.setModel(OFFSET)
+
+    def upperAbort(self):
+        self.upperMotor.abort()
+        
+    def lowerAbort(self):
+        self.lowerMotor.abort()
 
        
 if __name__ == "__main__":

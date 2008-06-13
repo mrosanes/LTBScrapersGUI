@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'SCRH.ui'
 #
-# Created: Fri Jun 13 10:01:59 2008
+# Created: Fri Jun 13 11:08:16 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -149,8 +149,10 @@ class Ui_SCRH(object):
         self.hboxlayout2 = QtGui.QHBoxLayout()
         self.hboxlayout2.setObjectName("hboxlayout2")
 
-        spacerItem1 = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout2.addItem(spacerItem1)
+        self.rightAbort = QtGui.QPushButton(self.rightEnc)
+        self.rightAbort.setMaximumSize(QtCore.QSize(60,25))
+        self.rightAbort.setObjectName("rightAbort")
+        self.hboxlayout2.addWidget(self.rightAbort)
 
         self.rightEncLabel = QtGui.QLabel(self.rightEnc)
         self.rightEncLabel.setObjectName("rightEncLabel")
@@ -212,8 +214,8 @@ class Ui_SCRH(object):
         self.leftLedState.setObjectName("leftLedState")
         self.hboxlayout3.addWidget(self.leftLedState)
 
-        spacerItem2 = QtGui.QSpacerItem(150,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout3.addItem(spacerItem2)
+        spacerItem1 = QtGui.QSpacerItem(150,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout3.addItem(spacerItem1)
 
         self.leftLimitN = TauLimitSwitch(self.leftStepper)
         self.leftLimitN.setUseParentModel(True)
@@ -278,8 +280,10 @@ class Ui_SCRH(object):
         self.hboxlayout5 = QtGui.QHBoxLayout()
         self.hboxlayout5.setObjectName("hboxlayout5")
 
-        spacerItem3 = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout5.addItem(spacerItem3)
+        self.leftAbort = QtGui.QPushButton(self.leftEnc)
+        self.leftAbort.setMaximumSize(QtCore.QSize(60,25))
+        self.leftAbort.setObjectName("leftAbort")
+        self.hboxlayout5.addWidget(self.leftAbort)
 
         self.leftEncLabel = QtGui.QLabel(self.leftEnc)
         self.leftEncLabel.setObjectName("leftEncLabel")
@@ -412,6 +416,7 @@ class Ui_SCRH(object):
         self.rightStepperWrite.setModel(QtGui.QApplication.translate("SCRH", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.rightStepperRead.setModel(QtGui.QApplication.translate("SCRH", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.rightStepperUnits.setModel(QtGui.QApplication.translate("SCRH", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
+        self.rightAbort.setText(QtGui.QApplication.translate("SCRH", "Abort", None, QtGui.QApplication.UnicodeUTF8))
         self.rightEncLabel.setText(QtGui.QApplication.translate("SCRH", "Encoder", None, QtGui.QApplication.UnicodeUTF8))
         self.rightEncRead.setModel(QtGui.QApplication.translate("SCRH", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.rightEncUnits.setModel(QtGui.QApplication.translate("SCRH", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
@@ -424,6 +429,7 @@ class Ui_SCRH(object):
         self.leftStepperWrite.setModel(QtGui.QApplication.translate("SCRH", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.leftStepperRead.setModel(QtGui.QApplication.translate("SCRH", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.leftStepperUnits.setModel(QtGui.QApplication.translate("SCRH", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
+        self.leftAbort.setText(QtGui.QApplication.translate("SCRH", "Abort", None, QtGui.QApplication.UnicodeUTF8))
         self.leftEncLabel.setText(QtGui.QApplication.translate("SCRH", "Encoder", None, QtGui.QApplication.UnicodeUTF8))
         self.leftEncRead.setModel(QtGui.QApplication.translate("SCRH", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.leftEncUnits.setModel(QtGui.QApplication.translate("SCRH", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))

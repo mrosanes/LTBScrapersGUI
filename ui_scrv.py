@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'SCRV.ui'
 #
-# Created: Fri Jun 13 10:01:59 2008
+# Created: Fri Jun 13 11:08:28 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -149,8 +149,10 @@ class Ui_SCRV(object):
         self.hboxlayout2 = QtGui.QHBoxLayout()
         self.hboxlayout2.setObjectName("hboxlayout2")
 
-        spacerItem1 = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout2.addItem(spacerItem1)
+        self.upperAbort = QtGui.QPushButton(self.upperEnc)
+        self.upperAbort.setMaximumSize(QtCore.QSize(60,25))
+        self.upperAbort.setObjectName("upperAbort")
+        self.hboxlayout2.addWidget(self.upperAbort)
 
         self.upperEncLabel = QtGui.QLabel(self.upperEnc)
         self.upperEncLabel.setObjectName("upperEncLabel")
@@ -282,8 +284,8 @@ class Ui_SCRV(object):
         self.lowerLedState.setObjectName("lowerLedState")
         self.hboxlayout5.addWidget(self.lowerLedState)
 
-        spacerItem2 = QtGui.QSpacerItem(150,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout5.addItem(spacerItem2)
+        spacerItem1 = QtGui.QSpacerItem(150,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
+        self.hboxlayout5.addItem(spacerItem1)
 
         self.lowerLimitN = TauLimitSwitch(self.lowerStepper)
         self.lowerLimitN.setUseParentModel(True)
@@ -348,8 +350,10 @@ class Ui_SCRV(object):
         self.hboxlayout7 = QtGui.QHBoxLayout()
         self.hboxlayout7.setObjectName("hboxlayout7")
 
-        spacerItem3 = QtGui.QSpacerItem(40,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout7.addItem(spacerItem3)
+        self.lowerAbort = QtGui.QPushButton(self.lowerEnc)
+        self.lowerAbort.setMaximumSize(QtCore.QSize(60,25))
+        self.lowerAbort.setObjectName("lowerAbort")
+        self.hboxlayout7.addWidget(self.lowerAbort)
 
         self.lowerEncLabel = QtGui.QLabel(self.lowerEnc)
         self.lowerEncLabel.setObjectName("lowerEncLabel")
@@ -408,6 +412,7 @@ class Ui_SCRV(object):
         self.upperStepperWrite.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.upperStepperRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.upperStepperUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
+        self.upperAbort.setText(QtGui.QApplication.translate("SCRV", "Abort", None, QtGui.QApplication.UnicodeUTF8))
         self.upperEncLabel.setText(QtGui.QApplication.translate("SCRV", "Encoder", None, QtGui.QApplication.UnicodeUTF8))
         self.upperEncRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.upperEncUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
@@ -424,6 +429,7 @@ class Ui_SCRV(object):
         self.lowerStepperWrite.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerStepperRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerStepperUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
+        self.lowerAbort.setText(QtGui.QApplication.translate("SCRV", "Abort", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerEncLabel.setText(QtGui.QApplication.translate("SCRV", "Encoder", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerEncRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerEncUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))

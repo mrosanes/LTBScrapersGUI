@@ -318,17 +318,17 @@
        <item row="0" column="0" >
         <layout class="QHBoxLayout" >
          <item>
-          <spacer>
-           <property name="orientation" >
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" >
+          <widget class="QPushButton" name="rightAbort" >
+           <property name="maximumSize" >
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>60</width>
+             <height>25</height>
             </size>
            </property>
-          </spacer>
+           <property name="text" >
+            <string>Abort</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="rightEncLabel" >
@@ -614,17 +614,17 @@
        <item row="0" column="0" >
         <layout class="QHBoxLayout" >
          <item>
-          <spacer>
-           <property name="orientation" >
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" >
+          <widget class="QPushButton" name="leftAbort" >
+           <property name="maximumSize" >
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>60</width>
+             <height>25</height>
             </size>
            </property>
-          </spacer>
+           <property name="text" >
+            <string>Abort</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="leftEncLabel" >

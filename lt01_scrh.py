@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 import sys
+import PyTango
 
-from PyQt4 import QtGui
+from PyQt4 import QtGui,QtCore
 from ui_scrh import Ui_SCRH
 
 #SCRAPER_NAME = 'LT-DI-SCRH-T0101'
@@ -30,6 +31,12 @@ class SCRH_T0101(QtGui.QMainWindow):
         self.ui = Ui_SCRH()
         self.ui.setupUi(self)
 
+        # Connect ui signals
+        QtCore.QObject.connect(self.ui.leftAbort,QtCore.SIGNAL("clicked()"),self.leftAbort)
+        QtCore.QObject.connect(self.ui.rightAbort,QtCore.SIGNAL("clicked()"),self.rightAbort)
+        self.leftMotor = PyTango.DeviceProxy(LEFT_STEPPER)
+        self.rightMotor = PyTango.DeviceProxy(RIGHT_STEPPER)
+        
         # Connect Motors
         self.ConnectMotors()
         
@@ -47,6 +54,12 @@ class SCRH_T0101(QtGui.QMainWindow):
         self.ui.rightEnc.setModel(RIGHT_ENC)
         self.ui.gap.setModel(GAP)
         self.ui.offset.setModel(OFFSET)
+
+    def leftAbort(self):
+        self.leftMotor.abort()
+        
+    def rightAbort(self):
+        self.rightMotor.abort()
 
        
 if __name__ == "__main__":
