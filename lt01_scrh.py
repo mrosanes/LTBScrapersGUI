@@ -5,7 +5,8 @@ import sys
 from PyQt4 import QtGui
 from ui_scrh import Ui_SCRH
 
-SCRAPPER_NAME = 'LT-DI-SCRH-T0101'
+#SCRAPER_NAME = 'LT-DI-SCRH-T0101'
+SCRAPER_NAME = 'Horizontal Scraper\nLinac To Booster Line'
 
 # SCRHT01-MOTL
 LEFT_STEPPER = 'motor/ltb_ipapctrl/5'
@@ -34,8 +35,8 @@ class SCRH_T0101(QtGui.QMainWindow):
         
     def ConnectMotors(self):
 
-        # Scrapper name
-        self.ui.SCRHName.setText(SCRAPPER_NAME)
+        # Scraper name
+        self.ui.SCRHName.setText(SCRAPER_NAME)
         
         # Real Motors
         self.ui.leftStepper.setModel(LEFT_STEPPER)

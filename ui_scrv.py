@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'SCRV.ui'
 #
-# Created: Tue May 27 17:30:44 2008
+# Created: Fri Jun 13 10:01:59 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -15,13 +15,13 @@ class Ui_SCRV(object):
         SCRV.resize(QtCore.QSize(QtCore.QRect(0,0,528,485).size()).expandedTo(SCRV.minimumSizeHint()))
 
         self.SCRVName = QtGui.QLabel(SCRV)
-        self.SCRVName.setGeometry(QtCore.QRect(160,30,288,41))
+        self.SCRVName.setGeometry(QtCore.QRect(160,10,361,71))
 
         font = QtGui.QFont()
-        font.setPointSize(25)
+        font.setPointSize(21)
         font.setWeight(75)
         font.setItalic(True)
-        font.setUnderline(True)
+        font.setUnderline(False)
         font.setBold(True)
         self.SCRVName.setFont(font)
         self.SCRVName.setObjectName("SCRVName")

@@ -5,7 +5,8 @@ import sys
 from PyQt4 import QtGui
 from ui_scrv import Ui_SCRV
 
-SCRAPER_NAME = 'LT-DI-SCRV-T0101'
+#SCRAPER_NAME = 'LT-DI-SCRV-T0101'
+SCRAPER_NAME = 'Vertical Scraper\nLinac To Booster Line'
 
 # SCRVT01-MOTU
 UPPER_STEPPER = 'motor/ltb_ipapctrl/3'
@@ -34,7 +35,7 @@ class SCRV_T0101(QtGui.QMainWindow):
         
     def ConnectMotors(self):
 
-        # Scrapper name
+        # Scraper name
         self.ui.SCRVName.setText(SCRAPER_NAME)
         
         # Real Motors

@@ -16,18 +16,18 @@
    <property name="geometry" >
     <rect>
      <x>160</x>
-     <y>30</y>
-     <width>288</width>
-     <height>41</height>
+     <y>10</y>
+     <width>361</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font" >
     <font>
-     <pointsize>25</pointsize>
+     <pointsize>21</pointsize>
      <weight>75</weight>
      <italic>true</italic>
      <bold>true</bold>
-     <underline>true</underline>
+     <underline>false</underline>
     </font>
    </property>
    <property name="text" >
