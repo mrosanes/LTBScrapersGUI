@@ -6,8 +6,8 @@ import PyTango
 from PyQt4 import QtGui,QtCore
 from ui_scrv import Ui_SCRV
 
-#SCRAPER_NAME = 'LT-DI-SCRV-T0101'
 SCRAPER_NAME = 'Vertical Scraper\nLinac To Booster Line'
+SCRAPER_NAME_TOOLTIP = 'LT-DI-SCRV-T0101'
 
 # SCRVT01-MOTU
 UPPER_STEPPER = 'motor/ltb_ipapctrl/3'
@@ -32,6 +32,7 @@ class SCRV_T0101(QtGui.QMainWindow):
         self.ui.setupUi(self)
 
         # Connect ui signals
+        QtCore.QObject.connect(self.ui.abort,QtCore.SIGNAL("clicked()"),self.abort)
         QtCore.QObject.connect(self.ui.upperAbort,QtCore.SIGNAL("clicked()"),self.upperAbort)
         QtCore.QObject.connect(self.ui.lowerAbort,QtCore.SIGNAL("clicked()"),self.lowerAbort)
         self.upperMotor = PyTango.DeviceProxy(UPPER_STEPPER)
@@ -44,6 +45,7 @@ class SCRV_T0101(QtGui.QMainWindow):
 
         # Scraper name
         self.ui.SCRVName.setText(SCRAPER_NAME)
+        self.ui.SCRVName.setToolTip(SCRAPER_NAME_TOOLTIP)
         
         # Real Motors
         self.ui.upperStepper.setModel(UPPER_STEPPER)
@@ -55,6 +57,10 @@ class SCRV_T0101(QtGui.QMainWindow):
         self.ui.gap.setModel(GAP)
         self.ui.offset.setModel(OFFSET)
 
+    def abort(self):
+        self.upperAbort()
+        self.lowerAbort()
+        
     def upperAbort(self):
         self.upperMotor.abort()
         
