@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 import sys
-import PyTango
-
+from tau.core import TangoFactory
 from PyQt4 import QtGui,QtCore
 from ui_scrh import Ui_SCRH
+from scrapercontroller import ScraperController
 
 SCRAPER_NAME = 'Horizontal Scraper\nLinac To Booster Line'
 SCRAPER_NAME_TOOLTIP = 'LT-DI-SCRH-T0101'
@@ -22,7 +22,22 @@ RIGHT_ENC = 'pm/lt01_pmenchrctrl/1'
 GAP = 'pm/lt01_hslitctrl/1'
 OFFSET = 'pm/lt01_hslitctrl/2'
 
-class SCRH_T0101(QtGui.QMainWindow):
+########################################
+# GCUNI FOR TESTING
+GCUNI_TESTING = False
+if GCUNI_TESTING:
+    SCRAPER_NAME = "GCUNI - TESTING @controls01"
+    LEFT_STEPPER = 'tango://controls01:10000/motor/gc_simumotctrl/1'
+    RIGHT_STEPPER = 'tango://controls01:10000/motor/gc_simumotctrl/2'
+
+    LEFT_ENC = 'tango://controls01:10000/motor/gc_simumotctrl/1'
+    RIGHT_ENC = 'tango://controls01:10000/motor/gc_simumotctrl/2'
+    
+    GAP = 'tango://controls01:10000/pm/gc_slit_ctrl/1'
+    OFFSET = 'tango://controls01:10000/pm/gc_slit_ctrl/2'
+########################################
+
+class SCRH_T0101(QtGui.QMainWindow,ScraperController):
     
     def __init__(self, parent=None):
         QtGui.QMainWindow.__init__(self, parent)
@@ -31,18 +46,16 @@ class SCRH_T0101(QtGui.QMainWindow):
         self.ui = Ui_SCRH()
         self.ui.setupUi(self)
 
-        # Connect ui signals
-        QtCore.QObject.connect(self.ui.abort,QtCore.SIGNAL("clicked()"),self.abort)
-        QtCore.QObject.connect(self.ui.leftAbort,QtCore.SIGNAL("clicked()"),self.leftAbort)
-        QtCore.QObject.connect(self.ui.rightAbort,QtCore.SIGNAL("clicked()"),self.rightAbort)
-        self.leftMotor = PyTango.DeviceProxy(LEFT_STEPPER)
-        self.rightMotor = PyTango.DeviceProxy(RIGHT_STEPPER)
-        
-        # Connect Motors
-        self.ConnectMotors()
-        
-    def ConnectMotors(self):
+        # The scraper controller functionality needs the UI components
+        ScraperController.__init__(
+            self,LEFT_STEPPER,RIGHT_STEPPER
+            ,self.ui.abort
+            ,self.ui.leftStepperRelative,self.ui.leftStepperDec,self.ui.leftStepperInc
+            ,self.ui.rightStepperRelative,self.ui.rightStepperDec,self.ui.rightStepperInc)
 
+        self.setTextAndModels()
+        
+    def setTextAndModels(self):
         # Scraper name
         self.ui.SCRHName.setText(SCRAPER_NAME)
         self.ui.SCRHName.setToolTip(SCRAPER_NAME_TOOLTIP)
@@ -56,16 +69,6 @@ class SCRH_T0101(QtGui.QMainWindow):
         self.ui.rightEnc.setModel(RIGHT_ENC)
         self.ui.gap.setModel(GAP)
         self.ui.offset.setModel(OFFSET)
-
-    def abort(self):
-        self.leftAbort()
-        self.rightAbort()
-        
-    def leftAbort(self):
-        self.leftMotor.abort()
-        
-    def rightAbort(self):
-        self.rightMotor.abort()
 
        
 if __name__ == "__main__":
