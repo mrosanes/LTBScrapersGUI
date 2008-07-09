@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'SCRV.ui'
 #
-# Created: Tue Jun 17 14:40:26 2008
+# Created: Wed Jul  9 12:11:42 2008
 #      by: PyQt4 UI code generator 4.3.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -149,177 +149,9 @@ class Ui_SCRV(object):
         self.hboxlayout2 = QtGui.QHBoxLayout()
         self.hboxlayout2.setObjectName("hboxlayout2")
 
-        self.upperAbort = QtGui.QPushButton(self.upperEnc)
-        self.upperAbort.setMaximumSize(QtCore.QSize(60,25))
-
-        palette = QtGui.QPalette()
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.WindowText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Button,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Light,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,63,63))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Midlight,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Dark,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(170,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Mid,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Text,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.BrightText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.ButtonText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Base,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Window,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Shadow,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.AlternateBase,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.WindowText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Button,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Light,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,63,63))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Midlight,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Dark,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(170,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Mid,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Text,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.BrightText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.ButtonText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Base,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Window,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Shadow,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.AlternateBase,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.WindowText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Button,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Light,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,63,63))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Midlight,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Dark,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(170,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Mid,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Text,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.BrightText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.ButtonText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Base,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Window,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Shadow,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.AlternateBase,brush)
-        self.upperAbort.setPalette(palette)
-        self.upperAbort.setObjectName("upperAbort")
-        self.hboxlayout2.addWidget(self.upperAbort)
-
-        self.upperEncLabel = QtGui.QLabel(self.upperEnc)
-        self.upperEncLabel.setObjectName("upperEncLabel")
-        self.hboxlayout2.addWidget(self.upperEncLabel)
-
         self.upperEncRead = TauValueLabel(self.upperEnc)
 
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.upperEncRead.sizePolicy().hasHeightForWidth())
@@ -334,7 +166,39 @@ class Ui_SCRV(object):
         self.upperEncUnits.setUseParentModel(True)
         self.upperEncUnits.setObjectName("upperEncUnits")
         self.hboxlayout2.addWidget(self.upperEncUnits)
-        self.gridlayout2.addLayout(self.hboxlayout2,0,0,1,1)
+        self.gridlayout2.addLayout(self.hboxlayout2,0,1,1,1)
+
+        self.hboxlayout3 = QtGui.QHBoxLayout()
+        self.hboxlayout3.setSpacing(0)
+        self.hboxlayout3.setObjectName("hboxlayout3")
+
+        self.upperStepperDec = QtGui.QPushButton(self.upperEnc)
+
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.MinimumExpanding,QtGui.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.upperStepperDec.sizePolicy().hasHeightForWidth())
+        self.upperStepperDec.setSizePolicy(sizePolicy)
+        self.upperStepperDec.setMaximumSize(QtCore.QSize(20,22))
+        self.upperStepperDec.setObjectName("upperStepperDec")
+        self.hboxlayout3.addWidget(self.upperStepperDec)
+
+        self.upperStepperRelative = QtGui.QDoubleSpinBox(self.upperEnc)
+
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.upperStepperRelative.sizePolicy().hasHeightForWidth())
+        self.upperStepperRelative.setSizePolicy(sizePolicy)
+        self.upperStepperRelative.setMaximum(1e+20)
+        self.upperStepperRelative.setObjectName("upperStepperRelative")
+        self.hboxlayout3.addWidget(self.upperStepperRelative)
+
+        self.upperStepperInc = QtGui.QPushButton(self.upperEnc)
+        self.upperStepperInc.setMaximumSize(QtCore.QSize(20,22))
+        self.upperStepperInc.setObjectName("upperStepperInc")
+        self.hboxlayout3.addWidget(self.upperStepperInc)
+        self.gridlayout2.addLayout(self.hboxlayout3,0,0,1,1)
         self.gridlayout.addWidget(self.upperEnc,1,0,1,1)
 
         self.gapAndOffset = QtGui.QGroupBox(SCRV)
@@ -352,10 +216,10 @@ class Ui_SCRV(object):
         self.gap.setShowText(False)
         self.gap.setObjectName("gap")
 
-        self.hboxlayout3 = QtGui.QHBoxLayout(self.gap)
-        self.hboxlayout3.setSpacing(2)
-        self.hboxlayout3.setMargin(0)
-        self.hboxlayout3.setObjectName("hboxlayout3")
+        self.hboxlayout4 = QtGui.QHBoxLayout(self.gap)
+        self.hboxlayout4.setSpacing(2)
+        self.hboxlayout4.setMargin(0)
+        self.hboxlayout4.setObjectName("hboxlayout4")
 
         self.gapRead = TauValueLabel(self.gap)
 
@@ -366,7 +230,7 @@ class Ui_SCRV(object):
         self.gapRead.setSizePolicy(sizePolicy)
         self.gapRead.setUseParentModel(True)
         self.gapRead.setObjectName("gapRead")
-        self.hboxlayout3.addWidget(self.gapRead)
+        self.hboxlayout4.addWidget(self.gapRead)
 
         self.gapUnits = TauConfigLabel(self.gap)
         self.gapUnits.setMinimumSize(QtCore.QSize(35,24))
@@ -374,7 +238,7 @@ class Ui_SCRV(object):
         self.gapUnits.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.gapUnits.setUseParentModel(True)
         self.gapUnits.setObjectName("gapUnits")
-        self.hboxlayout3.addWidget(self.gapUnits)
+        self.hboxlayout4.addWidget(self.gapUnits)
         self.vboxlayout.addWidget(self.gap)
 
         self.offset = TauGroupBox(self.gapAndOffset)
@@ -382,10 +246,10 @@ class Ui_SCRV(object):
         self.offset.setShowText(False)
         self.offset.setObjectName("offset")
 
-        self.hboxlayout4 = QtGui.QHBoxLayout(self.offset)
-        self.hboxlayout4.setSpacing(2)
-        self.hboxlayout4.setMargin(0)
-        self.hboxlayout4.setObjectName("hboxlayout4")
+        self.hboxlayout5 = QtGui.QHBoxLayout(self.offset)
+        self.hboxlayout5.setSpacing(2)
+        self.hboxlayout5.setMargin(0)
+        self.hboxlayout5.setObjectName("hboxlayout5")
 
         self.offsetRead = TauValueLabel(self.offset)
 
@@ -396,7 +260,7 @@ class Ui_SCRV(object):
         self.offsetRead.setSizePolicy(sizePolicy)
         self.offsetRead.setUseParentModel(True)
         self.offsetRead.setObjectName("offsetRead")
-        self.hboxlayout4.addWidget(self.offsetRead)
+        self.hboxlayout5.addWidget(self.offsetRead)
 
         self.offsetUnits = TauConfigLabel(self.offset)
         self.offsetUnits.setMinimumSize(QtCore.QSize(35,24))
@@ -404,7 +268,7 @@ class Ui_SCRV(object):
         self.offsetUnits.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.offsetUnits.setUseParentModel(True)
         self.offsetUnits.setObjectName("offsetUnits")
-        self.hboxlayout4.addWidget(self.offsetUnits)
+        self.hboxlayout5.addWidget(self.offsetUnits)
         self.vboxlayout.addWidget(self.offset)
 
         self.lowerJaw = QtGui.QGroupBox(SCRV)
@@ -426,8 +290,8 @@ class Ui_SCRV(object):
         self.gridlayout4.setSpacing(6)
         self.gridlayout4.setObjectName("gridlayout4")
 
-        self.hboxlayout5 = QtGui.QHBoxLayout()
-        self.hboxlayout5.setObjectName("hboxlayout5")
+        self.hboxlayout6 = QtGui.QHBoxLayout()
+        self.hboxlayout6.setObjectName("hboxlayout6")
 
         self.lowerLabelState = TauValueLabel(self.lowerStepper)
         self.lowerLabelState.setMinimumSize(QtCore.QSize(50,22))
@@ -436,45 +300,45 @@ class Ui_SCRV(object):
         self.lowerLabelState.setShowQuality(False)
         self.lowerLabelState.setUseParentModel(True)
         self.lowerLabelState.setObjectName("lowerLabelState")
-        self.hboxlayout5.addWidget(self.lowerLabelState)
+        self.hboxlayout6.addWidget(self.lowerLabelState)
 
         self.lowerLedState = TauStateLed(self.lowerStepper)
         self.lowerLedState.setUseParentModel(True)
         self.lowerLedState.setObjectName("lowerLedState")
-        self.hboxlayout5.addWidget(self.lowerLedState)
+        self.hboxlayout6.addWidget(self.lowerLedState)
 
         spacerItem1 = QtGui.QSpacerItem(150,20,QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Minimum)
-        self.hboxlayout5.addItem(spacerItem1)
+        self.hboxlayout6.addItem(spacerItem1)
 
         self.lowerLimitN = TauLimitSwitch(self.lowerStepper)
         self.lowerLimitN.setUseParentModel(True)
         self.lowerLimitN.setBoolIndex(2)
         self.lowerLimitN.setObjectName("lowerLimitN")
-        self.hboxlayout5.addWidget(self.lowerLimitN)
+        self.hboxlayout6.addWidget(self.lowerLimitN)
 
         self.lowerLimitLabel = QtGui.QLabel(self.lowerStepper)
         self.lowerLimitLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.lowerLimitLabel.setObjectName("lowerLimitLabel")
-        self.hboxlayout5.addWidget(self.lowerLimitLabel)
+        self.hboxlayout6.addWidget(self.lowerLimitLabel)
 
         self.lowerLimitP = TauLimitSwitch(self.lowerStepper)
         self.lowerLimitP.setUseParentModel(True)
         self.lowerLimitP.setBoolIndex(1)
         self.lowerLimitP.setObjectName("lowerLimitP")
-        self.hboxlayout5.addWidget(self.lowerLimitP)
-        self.gridlayout4.addLayout(self.hboxlayout5,0,0,1,1)
+        self.hboxlayout6.addWidget(self.lowerLimitP)
+        self.gridlayout4.addLayout(self.hboxlayout6,0,0,1,1)
 
-        self.hboxlayout6 = QtGui.QHBoxLayout()
-        self.hboxlayout6.setObjectName("hboxlayout6")
+        self.hboxlayout7 = QtGui.QHBoxLayout()
+        self.hboxlayout7.setObjectName("hboxlayout7")
 
         self.lowerStepperLabel = QtGui.QLabel(self.lowerStepper)
         self.lowerStepperLabel.setObjectName("lowerStepperLabel")
-        self.hboxlayout6.addWidget(self.lowerStepperLabel)
+        self.hboxlayout7.addWidget(self.lowerStepperLabel)
 
         self.lowerStepperWrite = TauValueLineEdit(self.lowerStepper)
         self.lowerStepperWrite.setUseParentModel(True)
         self.lowerStepperWrite.setObjectName("lowerStepperWrite")
-        self.hboxlayout6.addWidget(self.lowerStepperWrite)
+        self.hboxlayout7.addWidget(self.lowerStepperWrite)
 
         self.lowerStepperRead = TauValueLabel(self.lowerStepper)
 
@@ -485,15 +349,15 @@ class Ui_SCRV(object):
         self.lowerStepperRead.setSizePolicy(sizePolicy)
         self.lowerStepperRead.setUseParentModel(True)
         self.lowerStepperRead.setObjectName("lowerStepperRead")
-        self.hboxlayout6.addWidget(self.lowerStepperRead)
+        self.hboxlayout7.addWidget(self.lowerStepperRead)
 
         self.lowerStepperUnits = TauConfigLabel(self.lowerStepper)
         self.lowerStepperUnits.setMinimumSize(QtCore.QSize(35,24))
         self.lowerStepperUnits.setMaximumSize(QtCore.QSize(35,24))
         self.lowerStepperUnits.setUseParentModel(True)
         self.lowerStepperUnits.setObjectName("lowerStepperUnits")
-        self.hboxlayout6.addWidget(self.lowerStepperUnits)
-        self.gridlayout4.addLayout(self.hboxlayout6,1,0,1,1)
+        self.hboxlayout7.addWidget(self.lowerStepperUnits)
+        self.gridlayout4.addLayout(self.hboxlayout7,1,0,1,1)
         self.gridlayout3.addWidget(self.lowerStepper,0,0,1,1)
 
         self.lowerEnc = TauGroupBox(self.lowerJaw)
@@ -506,195 +370,59 @@ class Ui_SCRV(object):
         self.gridlayout5.setSpacing(6)
         self.gridlayout5.setObjectName("gridlayout5")
 
-        self.hboxlayout7 = QtGui.QHBoxLayout()
-        self.hboxlayout7.setObjectName("hboxlayout7")
-
-        self.lowerAbort = QtGui.QPushButton(self.lowerEnc)
-        self.lowerAbort.setMaximumSize(QtCore.QSize(60,25))
-
-        palette = QtGui.QPalette()
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.WindowText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Button,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Light,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,63,63))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Midlight,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Dark,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(170,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Mid,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Text,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.BrightText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.ButtonText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Base,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Window,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.Shadow,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active,QtGui.QPalette.AlternateBase,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.WindowText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Button,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Light,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,63,63))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Midlight,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Dark,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(170,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Mid,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Text,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.BrightText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.ButtonText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Base,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Window,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.Shadow,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive,QtGui.QPalette.AlternateBase,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.WindowText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Button,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,127,127))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Light,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,63,63))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Midlight,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Dark,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(170,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Mid,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Text,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,255,255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.BrightText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(127,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.ButtonText,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Base,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Window,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(0,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.Shadow,brush)
-
-        brush = QtGui.QBrush(QtGui.QColor(255,0,0))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled,QtGui.QPalette.AlternateBase,brush)
-        self.lowerAbort.setPalette(palette)
-        self.lowerAbort.setObjectName("lowerAbort")
-        self.hboxlayout7.addWidget(self.lowerAbort)
-
-        self.lowerEncLabel = QtGui.QLabel(self.lowerEnc)
-        self.lowerEncLabel.setObjectName("lowerEncLabel")
-        self.hboxlayout7.addWidget(self.lowerEncLabel)
+        self.hboxlayout8 = QtGui.QHBoxLayout()
+        self.hboxlayout8.setObjectName("hboxlayout8")
 
         self.lowerEncRead = TauValueLabel(self.lowerEnc)
 
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum,QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lowerEncRead.sizePolicy().hasHeightForWidth())
         self.lowerEncRead.setSizePolicy(sizePolicy)
         self.lowerEncRead.setUseParentModel(True)
         self.lowerEncRead.setObjectName("lowerEncRead")
-        self.hboxlayout7.addWidget(self.lowerEncRead)
+        self.hboxlayout8.addWidget(self.lowerEncRead)
 
         self.lowerEncUnits = TauConfigLabel(self.lowerEnc)
         self.lowerEncUnits.setMinimumSize(QtCore.QSize(35,24))
         self.lowerEncUnits.setMaximumSize(QtCore.QSize(35,24))
         self.lowerEncUnits.setUseParentModel(True)
         self.lowerEncUnits.setObjectName("lowerEncUnits")
-        self.hboxlayout7.addWidget(self.lowerEncUnits)
-        self.gridlayout5.addLayout(self.hboxlayout7,0,0,1,1)
+        self.hboxlayout8.addWidget(self.lowerEncUnits)
+        self.gridlayout5.addLayout(self.hboxlayout8,0,1,1,1)
+
+        self.hboxlayout9 = QtGui.QHBoxLayout()
+        self.hboxlayout9.setSpacing(0)
+        self.hboxlayout9.setObjectName("hboxlayout9")
+
+        self.lowerStepperDec = QtGui.QPushButton(self.lowerEnc)
+
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.MinimumExpanding,QtGui.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lowerStepperDec.sizePolicy().hasHeightForWidth())
+        self.lowerStepperDec.setSizePolicy(sizePolicy)
+        self.lowerStepperDec.setMaximumSize(QtCore.QSize(20,22))
+        self.lowerStepperDec.setObjectName("lowerStepperDec")
+        self.hboxlayout9.addWidget(self.lowerStepperDec)
+
+        self.lowerStepperRelative = QtGui.QDoubleSpinBox(self.lowerEnc)
+
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding,QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lowerStepperRelative.sizePolicy().hasHeightForWidth())
+        self.lowerStepperRelative.setSizePolicy(sizePolicy)
+        self.lowerStepperRelative.setMaximum(1e+20)
+        self.lowerStepperRelative.setObjectName("lowerStepperRelative")
+        self.hboxlayout9.addWidget(self.lowerStepperRelative)
+
+        self.lowerStepperInc = QtGui.QPushButton(self.lowerEnc)
+        self.lowerStepperInc.setMaximumSize(QtCore.QSize(20,22))
+        self.lowerStepperInc.setObjectName("lowerStepperInc")
+        self.hboxlayout9.addWidget(self.lowerStepperInc)
+        self.gridlayout5.addLayout(self.hboxlayout9,0,0,1,1)
         self.gridlayout3.addWidget(self.lowerEnc,1,0,1,1)
 
         self.gapLabel = QtGui.QLabel(SCRV)
@@ -903,10 +631,10 @@ class Ui_SCRV(object):
         self.upperStepperWrite.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.upperStepperRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.upperStepperUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
-        self.upperAbort.setText(QtGui.QApplication.translate("SCRV", "Abort", None, QtGui.QApplication.UnicodeUTF8))
-        self.upperEncLabel.setText(QtGui.QApplication.translate("SCRV", "Encoder", None, QtGui.QApplication.UnicodeUTF8))
         self.upperEncRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.upperEncUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
+        self.upperStepperDec.setText(QtGui.QApplication.translate("SCRV", "«", None, QtGui.QApplication.UnicodeUTF8))
+        self.upperStepperInc.setText(QtGui.QApplication.translate("SCRV", "»", None, QtGui.QApplication.UnicodeUTF8))
         self.gapRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.gapUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
         self.offsetRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
@@ -920,14 +648,13 @@ class Ui_SCRV(object):
         self.lowerStepperWrite.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerStepperRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerStepperUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
-        self.lowerAbort.setText(QtGui.QApplication.translate("SCRV", "Abort", None, QtGui.QApplication.UnicodeUTF8))
-        self.lowerEncLabel.setText(QtGui.QApplication.translate("SCRV", "Encoder", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerEncRead.setModel(QtGui.QApplication.translate("SCRV", "/Position", None, QtGui.QApplication.UnicodeUTF8))
         self.lowerEncUnits.setModel(QtGui.QApplication.translate("SCRV", "/Position?configuration=unit", None, QtGui.QApplication.UnicodeUTF8))
+        self.lowerStepperDec.setText(QtGui.QApplication.translate("SCRV", "«", None, QtGui.QApplication.UnicodeUTF8))
+        self.lowerStepperInc.setText(QtGui.QApplication.translate("SCRV", "»", None, QtGui.QApplication.UnicodeUTF8))
         self.gapLabel.setText(QtGui.QApplication.translate("SCRV", "Gap", None, QtGui.QApplication.UnicodeUTF8))
         self.offsetLabel.setText(QtGui.QApplication.translate("SCRV", "Offset", None, QtGui.QApplication.UnicodeUTF8))
         self.abort.setText(QtGui.QApplication.translate("SCRV", "Abort", None, QtGui.QApplication.UnicodeUTF8))
 
 from tau.widget import TauConfigLabel, TauGroupBox, TauValueLineEdit, TauLimitSwitch, TauValueLabel, TauStateLed
-import scrapers_rc
 import scrapers_rc
