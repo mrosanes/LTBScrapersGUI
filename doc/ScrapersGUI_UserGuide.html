@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.4  (Linux)">
+	<META NAME="CREATED" CONTENT="20080710;16395300">
+	<META NAME="CHANGED" CONTENT="20080710;18490600">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in; margin: 0.79in }
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "DejaVu Sans"; font-size: 16pt }
+		H1.ctl { font-family: "DejaVu Sans"; font-size: 16pt }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1 CLASS="western">Scrapers User Documentation and Troubleshooting</H1>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<H1 CLASS="western">Introduction</H1>
+<P STYLE="margin-bottom: 0in">In the LINAC there are <B>THREE</B>
+scrapers, <B>ONE</B> in the Diagnostics Line (<B>LT-DI-SCRH-T0201</B>)
+and <B>TWO</B> in the Linac To Booster Line (<B>LT-DI-SCRV-T0101</B>
+and <B>LT-DI-SCRH-T0101</B>).</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in">Scrapers can be Horizontal or Vertical,
+and both are composed by <B>TWO</B> different jaws that can go inside
+and out of the vacuum chamber. Each jaw is operated by an Icepap
+Motor and it can have the following states:</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><B>ON</B>: Everything is ok, the
+	motor can be moved</P>
+	<LI><P STYLE="margin-bottom: 0in"><B>MOVING</B>: The motor is
+	already moving</P>
+	<LI><P STYLE="margin-bottom: 0in"><B>OFF</B>: The motor can not be
+	operated</P>
+	<LI><P STYLE="margin-bottom: 0in"><B>ALARM</B>: The motor has
+	reached one end of it's way and a hardware limit is active</P>
+</UL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in">By convention, the jaws' ZERO position
+is in the center of the beam and the position increases as the jaw
+goes out of the beam. The GUI application contains the following
+elements for each jaw:</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in">State text</P>
+	<LI><P STYLE="margin-bottom: 0in">State led</P>
+	<LI><P STYLE="margin-bottom: 0in">Negative and Positive limit switch
+	leds</P>
+	<LI><P STYLE="margin-bottom: 0in">Jaw motor steps write (absolute)</P>
+	<LI><P STYLE="margin-bottom: 0in">Jaw motor steps read (absolute)</P>
+	<LI><P STYLE="margin-bottom: 0in">Move_Relative box to decrease
+	(left) and increase (right) steps</P>
+	<LI><P STYLE="margin-bottom: 0in">Encoder position read</P>
+</OL>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in">The scraper itself can be seen as a Gap
+(8) between the two jaws, and an Offset (9) of this gap from the
+center of the beam. The application contains also these <B>TWO</B>
+pseudo motors and in the near future, it will be possible for the
+operator to change the gap and the offset instead of moving each jaw
+separately.</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in">The gap and offset values are
+calculated using the encoder values. Finally, just notice that there
+is a big Abort button (10) designed to send the Abort command to the
+jaw motors.</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in">Find below an screenshot of the Linac
+To Booster Line Horizontal scraper.</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="http://www.cells.es/Intranet/Divisions/Computing/Controls/Help/DI/scrapers/horizontal_scraper_screenshot.png" NAME="graphics1" ALIGN=MIDDLE WIDTH=665 HEIGHT=261 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<H1 CLASS="western">Troubleshooting</H1>
+<P><I><B>A jaw does not move</B></I></P>
+<P STYLE="font-weight: medium">Check with <B>Astor</B> and <B>Jive</B>
+that the <B>icepap motor</B> for that jaw is available and it's state
+is <B>ON</B>. If the status is <B>OFF</B>, you must use <B>IcepapCMS</B>
+to power on the driver. If the status is ALARM, a limit switch may be
+preventing the movement, so there's no way to move further. In any
+case, the Status message might help find the reason why the motor is
+not in the <B>ON</B> state.</P>
+<P STYLE="font-weight: medium">Check that the Icepap system is
+reachable by issuing the <B>ping icedi0401.cells.es</B> command.</P>
+<P STYLE="font-weight: medium">Please, find below the <SPAN STYLE="text-decoration: none">correspondence
+between scraper jaws and Icepap drivers:</SPAN></P>
+<UL>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRH-T0201
+	LEFT: Driver 1 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>motor/ltb_ipapctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">);
+	RIGHT: Driver 2 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>motor/ltb_ipapctrl/2</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRV-T0101
+	UPPER: Driver 3 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>motor/ltb_ipapctrl/3</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">);
+	LOWER: Driver 4 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>motor/ltb_ipapctrl/4</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRH-T0101
+	LEFT: Driver 5 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>motor/ltb_ipapctrl/5</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">);
+	RIGHT: Driver 6 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>motor/ltb_ipapctrl/6</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+</UL>
+<P>Check with <B>Astor</B> <SPAN STYLE="font-weight: medium">and </SPAN><B>Jive</B>
+<SPAN STYLE="font-weight: medium">that the </SPAN><B>ltb Pool</B>
+<SPAN STYLE="font-weight: medium">(</SPAN><B>lt/di/pool-01</B><SPAN STYLE="font-weight: medium">)
+is available and it's state is </SPAN><B>ON</B><SPAN STYLE="font-weight: medium">.</SPAN></P>
+<P><SPAN STYLE="font-weight: medium">Reinitialize the Pool controller
+with the jive command </SPAN><B>InitController</B><SPAN STYLE="font-weight: medium">
+and the argument </SPAN><B>ltb_ipapctrl</B><SPAN STYLE="font-weight: medium">.</SPAN></P>
+<P><B>REMEMBER THAT THE ltb POOL IS ALSO USED FOR OTHER PURPOSES IN
+THE LTB.</B></P>
+<P STYLE="margin-bottom: 0in"><SPAN STYLE="font-weight: medium">If
+all the above fails, try to use IcepapCMS </SPAN><U><B>JUST to check</B></U><SPAN STYLE="text-decoration: none">
+</SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">that
+the driver is active and powered on.</SPAN></SPAN></P>
+<P><BR><BR>
+</P>
+<P STYLE="text-decoration: none"><I><B>The encoder position is not
+shown</B></I></P>
+<P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">Check
+with </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>Astor</B></SPAN><SPAN STYLE="text-decoration: none">
+</SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">and
+</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>Jive</B></SPAN><SPAN STYLE="text-decoration: none">
+</SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">that
+the </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pseudomotor
+motor</B></SPAN><SPAN STYLE="text-decoration: none"> </SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">for
+the encoder is available and it's state is </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>ON</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">.</SPAN></SPAN></P>
+<P STYLE="font-weight: medium; text-decoration: none">Please, find
+below the correspondence between scraper jaws and the encoder
+devices:</P>
+<UL>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRH-T0201
+	LEFT: Driver 1 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt02_pmenchlctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">);
+	RIGHT: Driver 2 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt02_pmenchrctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRV-T0101
+	UPPER: Driver 3 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_pmencvuctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">);
+	LOWER: Driver 4 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_pmencvuctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+	<LI><P STYLE="font-weight: medium"><SPAN STYLE="text-decoration: none">LT-DI-SCRH-T0101
+	LEFT: Driver 5 (</SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_pmenchlctrl/1</B></SPAN><SPAN STYLE="text-decoration: none">);
+	RIGHT: Driver 6 (</SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_pmenchrctrl/1</B></SPAN><SPAN STYLE="text-decoration: none">)</SPAN></P>
+</UL>
+<P STYLE="font-weight: medium"><SPAN STYLE="text-decoration: none">Check
+that the Adlink device server </SPAN><SPAN STYLE="text-decoration: none"><B>lt01/di/adc-scr-01</B></SPAN><SPAN STYLE="text-decoration: none">
+is available and it's state is </SPAN><SPAN STYLE="text-decoration: none"><B>RUNNING</B></SPAN><SPAN STYLE="text-decoration: none">.
+This device server is responsible to make the encoder values
+accessible to the Pool.</SPAN></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="text-decoration: none"><I><B>The gap and offset can not be
+set</B></I></P>
+<P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">Check
+with </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>Astor</B></SPAN><SPAN STYLE="text-decoration: none">
+</SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">and
+</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>Jive</B></SPAN><SPAN STYLE="text-decoration: none">
+</SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">that
+the </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pseudomotors
+motor</B></SPAN><SPAN STYLE="text-decoration: none"> </SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">for
+the gap and the offset are available and it's state is </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>ON</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">.</SPAN></SPAN></P>
+<P STYLE="font-weight: medium; text-decoration: none">Please, find
+below the correspondence between scraper jaws and the gap and offset
+devices:</P>
+<UL>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRH-T0201
+	GAP: </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt02_hslitctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">;
+	OFFSET: Driver 2 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt02_hslitctrl/2</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRV-T0101
+	GAP: </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_vslitctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">;
+	OFFSET: Driver 2 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_vslitctrl/2</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+	<LI><P><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">LT-DI-SCRH-T0101
+	GAP: </SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_hslitctrl/1</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">;
+	OFFSET: Driver 2 (</SPAN></SPAN><SPAN STYLE="text-decoration: none"><B>pm/lt01_hslitctrl/2</B></SPAN><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: medium">)</SPAN></SPAN></P>
+</UL>
+<P STYLE="font-weight: medium; text-decoration: none">Check that the
+two motors used by the gap and the offset are ready to perform that
+movement.</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+</BODY>
+</HTML>
