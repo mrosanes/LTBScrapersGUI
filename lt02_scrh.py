@@ -77,5 +77,6 @@ class SCRH_T0201(QtGui.QMainWindow,ScraperController):
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     scrh = SCRH_T0201()
+    scrh.setWindowTitle(SCRAPER_NAME.replace("\n"," "))
     scrh.show()
     sys.exit(app.exec_())

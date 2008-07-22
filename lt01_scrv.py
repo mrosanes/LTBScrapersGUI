@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import sys
 from tau.core import TangoFactory
 from PyQt4 import QtGui,QtCore
@@ -77,7 +76,8 @@ class SCRV_T0101(QtGui.QMainWindow,ScraperController):
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
-    scrh = SCRV_T0101()
-    scrh.show()
+    scrv = SCRV_T0101()
+    scrv.setWindowTitle(SCRAPER_NAME.replace("\n"," "))
+    scrv.show()
 
     sys.exit(app.exec_())
