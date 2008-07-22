@@ -15,26 +15,26 @@ UPPER_STEPPER = 'motor/ltb_ipapctrl/3'
 LOWER_STEPPER = 'motor/ltb_ipapctrl/4'
 
 # LT01/DI/ADC-SCR-01 Channel 2
-UPPER_ENC = 'pm/lt01_pmencvuctrl/1'
+UPPER_ENC = 'pm/lt01_pmencvu/1'
 # LT01/DI/ADC-SCR-01 Channel 3
-LOWER_ENC = 'pm/lt01_pmencvdctrl/1'
+LOWER_ENC = 'pm/lt01_pmencvd/1'
 
-GAP = 'pm/lt01_vslitctrl/1'
-OFFSET = 'pm/lt01_vslitctrl/2'
+GAP = 'pm/lt01_vslit/1'
+OFFSET = 'pm/lt01_vslit/2'
 
 ########################################
 # GCUNI FOR TESTING
 GCUNI_TESTING = False
 if GCUNI_TESTING:
     SCRAPER_NAME = "GCUNI - TESTING @controls01"
-    UPPER_STEPPER = 'tango://controls01:10000/motor/gc_simumotctrl/3'
-    LOWER_STEPPER = 'tango://controls01:10000/motor/gc_simumotctrl/4'
+    UPPER_STEPPER = 'tango://controls01:10000/motor/gc_simmotctrl/3'
+    LOWER_STEPPER = 'tango://controls01:10000/motor/gc_simmotctrl/4'
 
-    UPPER_ENC = 'tango://controls01:10000/motor/gc_simumotctrl/3'
-    LOWER_ENC = 'tango://controls01:10000/motor/gc_simumotctrl/4'
+    UPPER_ENC = 'tango://controls01:10000/motor/gc_simmotctrl/3'
+    LOWER_ENC = 'tango://controls01:10000/motor/gc_simmotctrl/4'
     
-    GAP = 'tango://controls01:10000/pm/gc_vslit_ctrl/1'
-    OFFSET = 'tango://controls01:10000/pm/gc_vslit_ctrl/2'
+    GAP = 'tango://controls01:10000/pm/gc_vslit/1'
+    OFFSET = 'tango://controls01:10000/pm/gc_vslit/2'
 ########################################
 
 class SCRV_T0101(QtGui.QMainWindow,ScraperController):
@@ -50,8 +50,12 @@ class SCRV_T0101(QtGui.QMainWindow,ScraperController):
         ScraperController.__init__(
             self,UPPER_STEPPER,LOWER_STEPPER
             ,self.ui.abort
-            ,self.ui.upperStepperRelative,self.ui.upperStepperDec,self.ui.upperStepperInc
-            ,self.ui.lowerStepperRelative,self.ui.lowerStepperDec,self.ui.lowerStepperInc)
+            ,self.ui.upperInValue,self.ui.upperMoveIn
+            ,self.ui.upperOutValue,self.ui.upperMoveOut
+            ,self.ui.upperAbsValue,self.ui.upperMoveAbs
+            ,self.ui.lowerInValue,self.ui.lowerMoveIn
+            ,self.ui.lowerOutValue,self.ui.lowerMoveOut
+            ,self.ui.lowerAbsValue,self.ui.lowerMoveAbs)
 
         self.setTextAndModels()
         

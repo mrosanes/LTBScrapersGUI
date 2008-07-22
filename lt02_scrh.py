@@ -13,27 +13,27 @@ LEFT_STEPPER = 'motor/ltb_ipapctrl/1'
 # SCRHT02_MOTR
 RIGHT_STEPPER = 'motor/ltb_ipapctrl/2'
 
-# LT01/DI/ADC-SCR-01 Channel 0
-LEFT_ENC = 'pm/lt02_pmenchlctrl/1'
-# LT01/DI/ADC-SCR-01 Channel 1
-RIGHT_ENC = 'pm/lt02_pmenchrctrl/1'
+# LT/DI/ADC-SCR-01 Channel 0
+LEFT_ENC = 'pm/lt02_pmenchl/1'
+# LT/DI/ADC-SCR-01 Channel 1
+RIGHT_ENC = 'pm/lt02_pmenchr/1'
 
-GAP = 'pm/lt02_hslitctrl/1'
-OFFSET = 'pm/lt02_hslitctrl/2'
+GAP = 'pm/lt02_hslit/1'
+OFFSET = 'pm/lt02_hslit/2'
 
 ########################################
 # GCUNI FOR TESTING
 GCUNI_TESTING = False
 if GCUNI_TESTING:
     SCRAPER_NAME = "GCUNI - TESTING @controls01"
-    LEFT_STEPPER = 'tango://controls01:10000/motor/gc_simumotctrl/1'
-    RIGHT_STEPPER = 'tango://controls01:10000/motor/gc_simumotctrl/2'
+    LEFT_STEPPER = 'tango://controls01:10000/motor/gc_simmotctrl/1'
+    RIGHT_STEPPER = 'tango://controls01:10000/motor/gc_simmotctrl/2'
 
-    LEFT_ENC = 'tango://controls01:10000/motor/gc_simumotctrl/1'
-    RIGHT_ENC = 'tango://controls01:10000/motor/gc_simumotctrl/2'
+    LEFT_ENC = 'tango://controls01:10000/motor/gc_simmotctrl/1'
+    RIGHT_ENC = 'tango://controls01:10000/motor/gc_simmotctrl/2'
     
-    GAP = 'tango://controls01:10000/pm/gc_slit_ctrl/1'
-    OFFSET = 'tango://controls01:10000/pm/gc_slit_ctrl/2'
+    GAP = 'tango://controls01:10000/pm/gc_hslit/1'
+    OFFSET = 'tango://controls01:10000/pm/gc_hslit/2'
 ########################################
 
 class SCRH_T0201(QtGui.QMainWindow,ScraperController):
@@ -49,8 +49,12 @@ class SCRH_T0201(QtGui.QMainWindow,ScraperController):
         ScraperController.__init__(
             self,LEFT_STEPPER,RIGHT_STEPPER
             ,self.ui.abort
-            ,self.ui.leftStepperRelative,self.ui.leftStepperDec,self.ui.leftStepperInc
-            ,self.ui.rightStepperRelative,self.ui.rightStepperDec,self.ui.rightStepperInc)
+            ,self.ui.leftInValue,self.ui.leftMoveIn
+            ,self.ui.leftOutValue,self.ui.leftMoveOut
+            ,self.ui.leftAbsValue,self.ui.leftMoveAbs
+            ,self.ui.rightInValue,self.ui.rightMoveIn
+            ,self.ui.rightOutValue,self.ui.rightMoveOut
+            ,self.ui.rightAbsValue,self.ui.rightMoveAbs)
 
         self.setTextAndModels()
         

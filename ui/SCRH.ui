@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>708</width>
-    <height>235</height>
+    <width>707</width>
+    <height>278</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -71,7 +71,7 @@
   <widget class="QLabel" name="rightJawLabel" >
    <property name="geometry" >
     <rect>
-     <x>560</x>
+     <x>540</x>
      <y>80</y>
      <width>142</width>
      <height>41</height>
@@ -86,684 +86,19 @@
     <string>Right Jaw</string>
    </property>
   </widget>
-  <widget class="QGroupBox" name="rightJaw" >
-   <property name="geometry" >
-    <rect>
-     <x>470</x>
-     <y>120</y>
-     <width>231</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" >
-    <property name="leftMargin" >
-     <number>0</number>
-    </property>
-    <property name="topMargin" >
-     <number>0</number>
-    </property>
-    <property name="rightMargin" >
-     <number>0</number>
-    </property>
-    <property name="bottomMargin" >
-     <number>0</number>
-    </property>
-    <property name="verticalSpacing" >
-     <number>2</number>
-    </property>
-    <item row="0" column="0" >
-     <widget class="TauGroupBox" name="rightStepper" >
-      <property name="flat" >
-       <bool>true</bool>
-      </property>
-      <property name="showText" >
-       <bool>false</bool>
-      </property>
-      <layout class="QGridLayout" >
-       <property name="leftMargin" >
-        <number>0</number>
-       </property>
-       <property name="topMargin" >
-        <number>0</number>
-       </property>
-       <property name="rightMargin" >
-        <number>0</number>
-       </property>
-       <property name="bottomMargin" >
-        <number>0</number>
-       </property>
-       <property name="horizontalSpacing" >
-        <number>6</number>
-       </property>
-       <property name="verticalSpacing" >
-        <number>6</number>
-       </property>
-       <item row="0" column="0" >
-        <layout class="QHBoxLayout" >
-         <item>
-          <widget class="TauValueLabel" name="rightLabelState" >
-           <property name="minimumSize" >
-            <size>
-             <width>50</width>
-             <height>22</height>
-            </size>
-           </property>
-           <property name="frameShape" >
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="frameShadow" >
-            <enum>QFrame::Plain</enum>
-           </property>
-           <property name="showQuality" >
-            <bool>false</bool>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/State</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauStateLed" name="rightLedState" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/State</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer>
-           <property name="orientation" >
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" >
-            <size>
-             <width>150</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="TauLimitSwitch" name="rightLimitN" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Limit_switches</string>
-           </property>
-           <property name="boolIndex" >
-            <number>2</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="rightLimitLabel" >
-           <property name="text" >
-            <string>- lim +</string>
-           </property>
-           <property name="alignment" >
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauLimitSwitch" name="rightLimitP" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Limit_switches</string>
-           </property>
-           <property name="boolIndex" >
-            <number>1</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="0" >
-        <layout class="QHBoxLayout" >
-         <item>
-          <widget class="QLabel" name="rightStepperLabel" >
-           <property name="text" >
-            <string>Stepper</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauValueLineEdit" name="rightStepperWrite" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauValueLabel" name="rightStepperRead" >
-           <property name="sizePolicy" >
-            <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauConfigLabel" name="rightStepperUnits" >
-           <property name="minimumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="maximumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position?configuration=unit</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="0" >
-     <widget class="TauGroupBox" name="rightEnc" >
-      <property name="flat" >
-       <bool>true</bool>
-      </property>
-      <property name="showText" >
-       <bool>false</bool>
-      </property>
-      <layout class="QGridLayout" >
-       <property name="leftMargin" >
-        <number>0</number>
-       </property>
-       <property name="topMargin" >
-        <number>0</number>
-       </property>
-       <property name="rightMargin" >
-        <number>0</number>
-       </property>
-       <property name="bottomMargin" >
-        <number>0</number>
-       </property>
-       <property name="horizontalSpacing" >
-        <number>6</number>
-       </property>
-       <property name="verticalSpacing" >
-        <number>6</number>
-       </property>
-       <item row="0" column="0" >
-        <layout class="QHBoxLayout" >
-         <item>
-          <layout class="QHBoxLayout" >
-           <property name="spacing" >
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QPushButton" name="rightStepperDec" >
-             <property name="sizePolicy" >
-              <sizepolicy vsizetype="MinimumExpanding" hsizetype="MinimumExpanding" >
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>20</width>
-               <height>22</height>
-              </size>
-             </property>
-             <property name="text" >
-              <string>«</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QDoubleSpinBox" name="rightStepperRelative" >
-             <property name="sizePolicy" >
-              <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximum" >
-              <double>100000000000000000000.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="rightStepperInc" >
-             <property name="maximumSize" >
-              <size>
-               <width>20</width>
-               <height>22</height>
-              </size>
-             </property>
-             <property name="text" >
-              <string>»</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="TauValueLabel" name="rightEncRead" >
-           <property name="sizePolicy" >
-            <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauConfigLabel" name="rightEncUnits" >
-           <property name="minimumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="maximumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position?configuration=unit</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="leftJaw" >
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>120</y>
-     <width>231</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" >
-    <property name="leftMargin" >
-     <number>0</number>
-    </property>
-    <property name="topMargin" >
-     <number>0</number>
-    </property>
-    <property name="rightMargin" >
-     <number>0</number>
-    </property>
-    <property name="bottomMargin" >
-     <number>0</number>
-    </property>
-    <property name="verticalSpacing" >
-     <number>2</number>
-    </property>
-    <item row="0" column="0" >
-     <widget class="TauGroupBox" name="leftStepper" >
-      <property name="flat" >
-       <bool>true</bool>
-      </property>
-      <property name="showText" >
-       <bool>false</bool>
-      </property>
-      <layout class="QGridLayout" >
-       <property name="leftMargin" >
-        <number>0</number>
-       </property>
-       <property name="topMargin" >
-        <number>0</number>
-       </property>
-       <property name="rightMargin" >
-        <number>0</number>
-       </property>
-       <property name="bottomMargin" >
-        <number>0</number>
-       </property>
-       <property name="horizontalSpacing" >
-        <number>6</number>
-       </property>
-       <property name="verticalSpacing" >
-        <number>6</number>
-       </property>
-       <item row="0" column="0" >
-        <layout class="QHBoxLayout" >
-         <item>
-          <widget class="TauValueLabel" name="leftLabelState" >
-           <property name="minimumSize" >
-            <size>
-             <width>50</width>
-             <height>22</height>
-            </size>
-           </property>
-           <property name="frameShape" >
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="frameShadow" >
-            <enum>QFrame::Plain</enum>
-           </property>
-           <property name="showQuality" >
-            <bool>false</bool>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/State</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauStateLed" name="leftLedState" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/State</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer>
-           <property name="orientation" >
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" >
-            <size>
-             <width>150</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="TauLimitSwitch" name="leftLimitN" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Limit_switches</string>
-           </property>
-           <property name="boolIndex" >
-            <number>2</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="leftLimitLabel" >
-           <property name="text" >
-            <string>- lim +</string>
-           </property>
-           <property name="alignment" >
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauLimitSwitch" name="leftLimitP" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Limit_switches</string>
-           </property>
-           <property name="boolIndex" >
-            <number>1</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="0" >
-        <layout class="QHBoxLayout" >
-         <item>
-          <widget class="QLabel" name="leftStepperLabel" >
-           <property name="text" >
-            <string>Stepper</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauValueLineEdit" name="leftStepperWrite" >
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauValueLabel" name="leftStepperRead" >
-           <property name="sizePolicy" >
-            <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauConfigLabel" name="leftStepperUnits" >
-           <property name="minimumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="maximumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position?configuration=unit</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="0" >
-     <widget class="TauGroupBox" name="leftEnc" >
-      <property name="sizePolicy" >
-       <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="flat" >
-       <bool>true</bool>
-      </property>
-      <property name="showText" >
-       <bool>false</bool>
-      </property>
-      <layout class="QGridLayout" >
-       <property name="leftMargin" >
-        <number>0</number>
-       </property>
-       <property name="topMargin" >
-        <number>0</number>
-       </property>
-       <property name="rightMargin" >
-        <number>0</number>
-       </property>
-       <property name="bottomMargin" >
-        <number>0</number>
-       </property>
-       <property name="horizontalSpacing" >
-        <number>-1</number>
-       </property>
-       <property name="verticalSpacing" >
-        <number>0</number>
-       </property>
-       <item row="0" column="0" >
-        <layout class="QHBoxLayout" >
-         <item>
-          <layout class="QHBoxLayout" >
-           <property name="spacing" >
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QPushButton" name="leftStepperDec" >
-             <property name="sizePolicy" >
-              <sizepolicy vsizetype="MinimumExpanding" hsizetype="MinimumExpanding" >
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize" >
-              <size>
-               <width>20</width>
-               <height>22</height>
-              </size>
-             </property>
-             <property name="text" >
-              <string>«</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QDoubleSpinBox" name="leftStepperRelative" >
-             <property name="sizePolicy" >
-              <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximum" >
-              <double>100000000000000000000.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="leftStepperInc" >
-             <property name="maximumSize" >
-              <size>
-               <width>20</width>
-               <height>22</height>
-              </size>
-             </property>
-             <property name="text" >
-              <string>»</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <widget class="TauValueLabel" name="leftEncRead" >
-           <property name="sizePolicy" >
-            <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="TauConfigLabel" name="leftEncUnits" >
-           <property name="minimumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="maximumSize" >
-            <size>
-             <width>35</width>
-             <height>24</height>
-            </size>
-           </property>
-           <property name="useParentModel" >
-            <bool>true</bool>
-           </property>
-           <property name="model" >
-            <string>/Position?configuration=unit</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QGroupBox" name="gapAndOffset" >
    <property name="geometry" >
     <rect>
-     <x>250</x>
+     <x>220</x>
      <y>180</y>
-     <width>211</width>
-     <height>41</height>
+     <width>271</width>
+     <height>84</height>
     </rect>
    </property>
    <property name="flat" >
     <bool>true</bool>
    </property>
-   <layout class="QHBoxLayout" >
-    <property name="spacing" >
-     <number>0</number>
-    </property>
+   <layout class="QGridLayout" >
     <property name="leftMargin" >
      <number>0</number>
     </property>
@@ -776,28 +111,19 @@
     <property name="bottomMargin" >
      <number>0</number>
     </property>
-    <item>
+    <property name="horizontalSpacing" >
+     <number>0</number>
+    </property>
+    <property name="verticalSpacing" >
+     <number>0</number>
+    </property>
+    <item row="0" column="0" >
      <widget class="TauGroupBox" name="gap" >
-      <property name="flat" >
-       <bool>true</bool>
-      </property>
       <property name="showText" >
        <bool>false</bool>
       </property>
-      <layout class="QGridLayout" >
-       <property name="leftMargin" >
-        <number>0</number>
-       </property>
-       <property name="topMargin" >
-        <number>0</number>
-       </property>
-       <property name="rightMargin" >
-        <number>0</number>
-       </property>
-       <property name="bottomMargin" >
-        <number>0</number>
-       </property>
-       <item row="0" column="0" >
+      <layout class="QVBoxLayout" >
+       <item>
         <layout class="QHBoxLayout" >
          <item>
           <widget class="TauValueLabel" name="gapRead" >
@@ -816,7 +142,46 @@
           </widget>
          </item>
          <item>
-          <widget class="TauConfigLabel" name="gapUnits" >
+          <widget class="TauConfigLabel" name="gapReadUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>-1</number>
+         </property>
+         <item>
+          <widget class="TauValueLineEdit" name="gapWrite" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="gapWriteUnits" >
            <property name="minimumSize" >
             <size>
              <width>35</width>
@@ -842,28 +207,13 @@
       </layout>
      </widget>
     </item>
-    <item>
+    <item row="0" column="1" >
      <widget class="TauGroupBox" name="offset" >
-      <property name="flat" >
-       <bool>true</bool>
-      </property>
       <property name="showText" >
        <bool>false</bool>
       </property>
-      <layout class="QGridLayout" >
-       <property name="leftMargin" >
-        <number>0</number>
-       </property>
-       <property name="topMargin" >
-        <number>0</number>
-       </property>
-       <property name="rightMargin" >
-        <number>0</number>
-       </property>
-       <property name="bottomMargin" >
-        <number>0</number>
-       </property>
-       <item row="0" column="0" >
+      <layout class="QVBoxLayout" >
+       <item>
         <layout class="QHBoxLayout" >
          <item>
           <widget class="TauValueLabel" name="offsetRead" >
@@ -882,7 +232,43 @@
           </widget>
          </item>
          <item>
-          <widget class="TauConfigLabel" name="offsetUnits" >
+          <widget class="TauConfigLabel" name="offsetReadUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="TauValueLineEdit" name="OffsetWrite" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="offsetWriteUnits" >
            <property name="minimumSize" >
             <size>
              <width>35</width>
@@ -931,7 +317,7 @@
   <widget class="QLabel" name="offsetLabel" >
    <property name="geometry" >
     <rect>
-     <x>350</x>
+     <x>380</x>
      <y>140</y>
      <width>88</width>
      <height>40</height>
@@ -1330,6 +716,796 @@
    <property name="text" >
     <string>Abort</string>
    </property>
+  </widget>
+  <widget class="QGroupBox" name="leftJaw" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>190</width>
+     <height>144</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string/>
+   </property>
+   <layout class="QVBoxLayout" >
+    <property name="spacing" >
+     <number>0</number>
+    </property>
+    <property name="leftMargin" >
+     <number>0</number>
+    </property>
+    <property name="topMargin" >
+     <number>0</number>
+    </property>
+    <property name="rightMargin" >
+     <number>0</number>
+    </property>
+    <property name="bottomMargin" >
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="TauGroupBox" name="leftStepper" >
+      <property name="flat" >
+       <bool>true</bool>
+      </property>
+      <property name="showText" >
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" >
+       <property name="leftMargin" >
+        <number>0</number>
+       </property>
+       <property name="topMargin" >
+        <number>0</number>
+       </property>
+       <property name="rightMargin" >
+        <number>0</number>
+       </property>
+       <property name="bottomMargin" >
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing" >
+        <number>0</number>
+       </property>
+       <property name="verticalSpacing" >
+        <number>0</number>
+       </property>
+       <item row="0" column="0" >
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="TauValueLabel" name="leftLabelState" >
+           <property name="minimumSize" >
+            <size>
+             <width>50</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="frameShape" >
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow" >
+            <enum>QFrame::Plain</enum>
+           </property>
+           <property name="showQuality" >
+            <bool>false</bool>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/State</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauStateLed" name="leftLedState" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/State</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="TauLimitSwitch" name="leftLimitN" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Limit_switches</string>
+           </property>
+           <property name="boolIndex" >
+            <number>2</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="leftLimitLabel" >
+           <property name="text" >
+            <string>- lim +</string>
+           </property>
+           <property name="alignment" >
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauLimitSwitch" name="leftLimitP" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Limit_switches</string>
+           </property>
+           <property name="boolIndex" >
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="leftMoveIn" >
+           <property name="text" >
+            <string>Move IN</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="leftInValue" >
+           <property name="decimals" >
+            <number>3</number>
+           </property>
+           <property name="minimum" >
+            <double>0.005000000000000</double>
+           </property>
+           <property name="maximum" >
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep" >
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value" >
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="leftInStepperUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="leftMoveOut" >
+           <property name="text" >
+            <string>Move OUT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="leftOutValue" >
+           <property name="decimals" >
+            <number>3</number>
+           </property>
+           <property name="minimum" >
+            <double>0.005000000000000</double>
+           </property>
+           <property name="maximum" >
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep" >
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value" >
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="leftOutStepperUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="leftMoveAbs" >
+           <property name="text" >
+            <string>Move TO</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="leftAbsValue" >
+           <property name="decimals" >
+            <number>3</number>
+           </property>
+           <property name="maximum" >
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep" >
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value" >
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="leftAbsStepperUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="TauGroupBox" name="leftEnc" >
+      <property name="sizePolicy" >
+       <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="flat" >
+       <bool>true</bool>
+      </property>
+      <property name="showText" >
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" >
+       <property name="leftMargin" >
+        <number>0</number>
+       </property>
+       <property name="topMargin" >
+        <number>0</number>
+       </property>
+       <property name="rightMargin" >
+        <number>0</number>
+       </property>
+       <property name="bottomMargin" >
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing" >
+        <number>-1</number>
+       </property>
+       <property name="verticalSpacing" >
+        <number>0</number>
+       </property>
+       <item row="0" column="0" >
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="leftEncLabel" >
+           <property name="text" >
+            <string>Encoder read:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauValueLabel" name="leftEncRead" >
+           <property name="sizePolicy" >
+            <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="leftEncUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="rightJaw" >
+   <property name="geometry" >
+    <rect>
+     <x>500</x>
+     <y>120</y>
+     <width>190</width>
+     <height>144</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string/>
+   </property>
+   <layout class="QVBoxLayout" >
+    <property name="spacing" >
+     <number>0</number>
+    </property>
+    <property name="leftMargin" >
+     <number>0</number>
+    </property>
+    <property name="topMargin" >
+     <number>0</number>
+    </property>
+    <property name="rightMargin" >
+     <number>0</number>
+    </property>
+    <property name="bottomMargin" >
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="TauGroupBox" name="rightStepper" >
+      <property name="flat" >
+       <bool>true</bool>
+      </property>
+      <property name="showText" >
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" >
+       <property name="leftMargin" >
+        <number>0</number>
+       </property>
+       <property name="topMargin" >
+        <number>0</number>
+       </property>
+       <property name="rightMargin" >
+        <number>0</number>
+       </property>
+       <property name="bottomMargin" >
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing" >
+        <number>0</number>
+       </property>
+       <property name="verticalSpacing" >
+        <number>0</number>
+       </property>
+       <item row="0" column="0" >
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="TauValueLabel" name="rightLabelState" >
+           <property name="minimumSize" >
+            <size>
+             <width>50</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="frameShape" >
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow" >
+            <enum>QFrame::Plain</enum>
+           </property>
+           <property name="showQuality" >
+            <bool>false</bool>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/State</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauStateLed" name="rightLedState" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/State</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="TauLimitSwitch" name="rightLimitN" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Limit_switches</string>
+           </property>
+           <property name="boolIndex" >
+            <number>2</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="rightLimitLabel" >
+           <property name="text" >
+            <string>- lim +</string>
+           </property>
+           <property name="alignment" >
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauLimitSwitch" name="rightLimitP" >
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Limit_switches</string>
+           </property>
+           <property name="boolIndex" >
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="rightMoveIn" >
+           <property name="text" >
+            <string>Move IN</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="rightInValue" >
+           <property name="decimals" >
+            <number>3</number>
+           </property>
+           <property name="minimum" >
+            <double>0.005000000000000</double>
+           </property>
+           <property name="maximum" >
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep" >
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value" >
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="rightInStepperUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="rightMoveOut" >
+           <property name="text" >
+            <string>Move OUT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="rightOutValue" >
+           <property name="decimals" >
+            <number>3</number>
+           </property>
+           <property name="minimum" >
+            <double>0.005000000000000</double>
+           </property>
+           <property name="maximum" >
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep" >
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value" >
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="rightOutStepperUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="rightMoveAbs" >
+           <property name="text" >
+            <string>Move TO</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="rightAbsValue" >
+           <property name="decimals" >
+            <number>3</number>
+           </property>
+           <property name="maximum" >
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep" >
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value" >
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="rightAbsStepperUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="TauGroupBox" name="rightEnc" >
+      <property name="sizePolicy" >
+       <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="flat" >
+       <bool>true</bool>
+      </property>
+      <property name="showText" >
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" >
+       <property name="leftMargin" >
+        <number>0</number>
+       </property>
+       <property name="topMargin" >
+        <number>0</number>
+       </property>
+       <property name="rightMargin" >
+        <number>0</number>
+       </property>
+       <property name="bottomMargin" >
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing" >
+        <number>-1</number>
+       </property>
+       <property name="verticalSpacing" >
+        <number>0</number>
+       </property>
+       <item row="0" column="0" >
+        <layout class="QHBoxLayout" >
+         <item>
+          <widget class="QLabel" name="rightEncLabel" >
+           <property name="text" >
+            <string>Encoder read:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauValueLabel" name="rightEncRead" >
+           <property name="sizePolicy" >
+            <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TauConfigLabel" name="rightEncUnits" >
+           <property name="minimumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>35</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="useParentModel" >
+            <bool>true</bool>
+           </property>
+           <property name="model" >
+            <string>/Position?configuration=unit</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <customwidgets>
