@@ -1,5 +1,5 @@
 #!/bin/bash
 
 pushd $SICILIA/applications/ltb_diagnostics/scrapers
-python lt01_scrh.py
+exec python lt01_scrh.py
 popd
