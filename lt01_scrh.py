@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-from tau.core import TangoFactory
+import tau.core
 from PyQt4 import QtGui,QtCore
 from ui_scrh import Ui_SCRH
 from scrapercontroller import ScraperController
