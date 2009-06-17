@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import sys
-from tau.core import TangoFactory
 from PyQt4 import QtGui,QtCore
 from ui_scrv import Ui_SCRV
 from scrapercontroller import ScraperController
