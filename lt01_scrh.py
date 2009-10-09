@@ -10,17 +10,17 @@ SCRAPER_NAME = 'Horizontal Scraper\nLinac To Booster Line'
 SCRAPER_NAME_TOOLTIP = 'LT-DI-SCRH-T0101'
 
 # SCRHT01-MOTL
-LEFT_STEPPER = 'motor/ltb_ipapctrl/5'
+LEFT_STEPPER = 'lt01_scrhl'
 # SCRHT01-MOTR
-RIGHT_STEPPER = 'motor/ltb_ipapctrl/6'
+RIGHT_STEPPER = 'lt01_scrhr'
 
 # LT01/DI/ADC-SCR-01 Channel 4
-LEFT_ENC = 'pm/lt01_pmenchl/1'
+LEFT_ENC = 'lt01_scrhl_enc'
 # LT01/DI/ADC-SCR-01 Channel 5
-RIGHT_ENC = 'pm/lt01_pmenchr/1'
+RIGHT_ENC = 'lt01_scrhr_enc'
 
-GAP = 'pm/lt01_hslit/1'
-OFFSET = 'pm/lt01_hslit/2'
+GAP = 'lt01_hgap'
+OFFSET = 'lt01_hoffset'
 
 ########################################
 # GCUNI FOR TESTING

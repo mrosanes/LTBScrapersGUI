@@ -8,17 +8,17 @@ SCRAPER_NAME = 'Vertical Scraper\nLinac To Booster Line'
 SCRAPER_NAME_TOOLTIP = 'LT-DI-SCRV-T0101'
 
 # SCRVT01-MOTU
-UPPER_STEPPER = 'motor/ltb_ipapctrl/3'
+UPPER_STEPPER = 'lt01_scrvu'
 # SCRVT01-MOTD
-LOWER_STEPPER = 'motor/ltb_ipapctrl/4'
+LOWER_STEPPER = 'lt01_scrvd'
 
 # LT01/DI/ADC-SCR-01 Channel 2
-UPPER_ENC = 'pm/lt01_pmencvu/1'
+UPPER_ENC = 'lt01_scrvu_enc'
 # LT01/DI/ADC-SCR-01 Channel 3
-LOWER_ENC = 'pm/lt01_pmencvd/1'
+LOWER_ENC = 'lt01_scrvd_enc'
 
-GAP = 'pm/lt01_vslit/1'
-OFFSET = 'pm/lt01_vslit/2'
+GAP = 'lt01_vgap'
+OFFSET = 'lt01_voffset'
 
 ########################################
 # GCUNI FOR TESTING
