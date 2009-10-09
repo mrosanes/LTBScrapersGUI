@@ -8,17 +8,23 @@ SCRAPER_NAME = 'Horizontal Scraper - Diagnostics Line'
 SCRAPER_NAME_TOOLTIP = 'LT-DI-SCRH-T0201'
 
 # SCRHT02_MOTL
-LEFT_STEPPER = 'lt02_scrhl'
+#LEFT_STEPPER = 'lt02_scrhl'
+LEFT_STEPPER = 'motor/lt_ipapscrapers_ctrl/1'
 # SCRHT02_MOTR
-RIGHT_STEPPER = 'lt02_scrhr'
+#RIGHT_STEPPER = 'lt02_scrhr'
+RIGHT_STEPPER = 'motor/lt_ipapscrapers_ctrl/2'
 
 # LT/DI/ADC-SCR-01 Channel 0
-LEFT_ENC = 'lt02_scrhl_enc'
+#LEFT_ENC = 'lt02_scrhl_enc'
+LEFT_ENC = 'pm/lt02_pmenchl_ctrl/1'
 # LT/DI/ADC-SCR-01 Channel 1
-RIGHT_ENC = 'lt02_scrhr_enc'
+#RIGHT_ENC = 'lt02_scrhr_enc'
+RIGHT_ENC = 'pm/lt02_pmenchr_ctrl/1'
 
-GAP = 'lt02_hgap'
-OFFSET = 'lt02_hoffset'
+#GAP = 'lt02_hgap'
+GAP = 'pm/lt02_hslit_ctrl/1'
+#OFFSET = 'lt02_hoffset'
+OFFSET = 'pm/lt02_hslit_ctrl/2'
 
 ########################################
 # GCUNI FOR TESTING
