@@ -26,21 +26,6 @@ GAP = 'pm/lt01_vslit_ctrl/1'
 #OFFSET = 'lt01_voffset'
 OFFSET = 'pm/lt01_vslit_ctrl/2'
 
-########################################
-# GCUNI FOR TESTING
-GCUNI_TESTING = False
-if GCUNI_TESTING:
-    SCRAPER_NAME = "GCUNI - TESTING @controls01"
-    UPPER_STEPPER = 'tango://controls01:10000/motor/gc_simmotctrl/3'
-    LOWER_STEPPER = 'tango://controls01:10000/motor/gc_simmotctrl/4'
-
-    UPPER_ENC = 'tango://controls01:10000/motor/gc_simmotctrl/3'
-    LOWER_ENC = 'tango://controls01:10000/motor/gc_simmotctrl/4'
-    
-    GAP = 'tango://controls01:10000/pm/gc_vslit/1'
-    OFFSET = 'tango://controls01:10000/pm/gc_vslit/2'
-########################################
-
 class SCRV_T0101(QtGui.QMainWindow,ScraperController):
     
     def __init__(self, parent=None):
@@ -52,7 +37,7 @@ class SCRV_T0101(QtGui.QMainWindow,ScraperController):
 
         # The scraper controller functionality needs the UI components
         ScraperController.__init__(
-            self,UPPER_STEPPER,LOWER_STEPPER
+            self,UPPER_ENC,LOWER_ENC
             ,self.ui.abort
             ,self.ui.upperInValue,self.ui.upperMoveIn
             ,self.ui.upperOutValue,self.ui.upperMoveOut
