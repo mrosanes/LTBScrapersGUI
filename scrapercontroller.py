@@ -75,7 +75,8 @@ class ScraperController():
 
     def moveRelative(self,motor,inc):
         try:
-            pos = motor.read_attribute("Position").value
+            #pos = motor.read_attribute("Position").value
+            pos = motor.getAttribute('Position').read().value
             pos = pos + float(inc)
             motor.write_attribute("Position",pos)
         except Exception,e:
