@@ -16,10 +16,13 @@ RIGHT_STEPPER = 'motor/lt_ipapscrapers_ctrl/2'
 
 # LT/DI/ADC-SCR-01 Channel 0
 #LEFT_ENC = 'lt02_scrhl_enc'
-LEFT_ENC = 'pm/lt02_pmenchl_ctrl/1'
+#LEFT_ENC = 'pm/lt02_pmenchl_ctrl/1'
+LEFT_ENC = LEFT_STEPPER
+
 # LT/DI/ADC-SCR-01 Channel 1
 #RIGHT_ENC = 'lt02_scrhr_enc'
-RIGHT_ENC = 'pm/lt02_pmenchr_ctrl/1'
+#RIGHT_ENC = 'pm/lt02_pmenchr_ctrl/1'
+RIGHT_ENC = RIGHT_STEPPER
 
 #GAP = 'lt02_hgap'
 GAP = 'pm/lt02_hslit_ctrl/1'

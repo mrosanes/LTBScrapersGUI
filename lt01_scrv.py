@@ -16,10 +16,13 @@ LOWER_STEPPER = 'motor/lt_ipapscrapers_ctrl/4'
 
 # LT01/DI/ADC-SCR-01 Channel 2
 #UPPER_ENC = 'lt01_scrvu_enc'
-UPPER_ENC = 'pm/lt01_pmencvu_ctrl/1'
+#UPPER_ENC = 'pm/lt01_pmencvu_ctrl/1'
+UPPER_ENC = UPPER_STEPPER
+
 # LT01/DI/ADC-SCR-01 Channel 3
 #LOWER_ENC = 'lt01_scrvd_enc'
-LOWER_ENC = 'pm/lt01_pmencvd_ctrl/1'
+#LOWER_ENC = 'pm/lt01_pmencvd_ctrl/1'
+LOWER_ENC = LOWER_STEPPER
 
 #GAP = 'lt01_vgap'
 GAP = 'pm/lt01_vslit_ctrl/1'
