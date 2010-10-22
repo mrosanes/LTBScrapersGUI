@@ -129,7 +129,7 @@ LT01_SCRH_MODELS['OFFSET'] = 'pm/lt01_hslit_ctrl/2'
 
 SR_SCRV_MODELS = {}
 SR_SCRV_MODELS['SCRAPER_NAME'] = 'Vertical Scraper\nInjection Straight'
-SR_SCRV_MODELS['SCRAPER_NAME_TOOLTIP'] = ''
+SR_SCRV_MODELS['SCRAPER_NAME_TOOLTIP'] = 'SR-DI-SCRV-S16-01'
 SR_SCRV_MODELS['UPPER_STEPPER'] = 'motor/sr_ipapfshscrapers_ctrl/3'
 SR_SCRV_MODELS['LOWER_STEPPER'] = 'motor/sr_ipapfshscrapers_ctrl/4'
 SR_SCRV_MODELS['UPPER_ENC'] = SR_SCRV_MODELS['UPPER_STEPPER']
@@ -139,7 +139,7 @@ SR_SCRV_MODELS['OFFSET'] = 'pm/sr_vslit_ctrl/2'
 
 SR_SCRH_MODELS = {}
 SR_SCRH_MODELS['SCRAPER_NAME'] = 'Horizontal Scraper\nInjection Straight'
-SR_SCRH_MODELS['SCRAPER_NAME_TOOLTIP'] = ''
+SR_SCRH_MODELS['SCRAPER_NAME_TOOLTIP'] = 'SR-DI-SCRH-S16-01'
 SR_SCRH_MODELS['LEFT_STEPPER'] = 'motor/sr_ipapfshscrapers_ctrl/5'
 SR_SCRH_MODELS['RIGHT_STEPPER'] = 'motor/sr_ipapfshscrapers_ctrl/6'
 SR_SCRH_MODELS['LEFT_ENC'] = SR_SCRH_MODELS['LEFT_STEPPER']
