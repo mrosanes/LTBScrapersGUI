@@ -1,5 +1,0 @@
-#!/bin/bash
-
-pushd $SICILIA/applications/ltb_diagnostics/scrapers
-exec python lt02_scrh.py
-popd

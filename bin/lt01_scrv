@@ -1,5 +1,0 @@
-#!/bin/bash
-
-pushd $SICILIA/applications/ltb_diagnostics/scrapers
-exec python lt01_scrv.py
-popd
