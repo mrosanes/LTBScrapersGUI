@@ -4,6 +4,8 @@ from PyQt4 import QtGui,QtCore
 
 from ui_scrapersform import Ui_ScraperForm
 import taurus
+import optparse
+from taurus.qt.qtgui.dialog import TaurusMessageBox
 
 class ScraperWindow(QtGui.QMainWindow):
     def __init__(self, models, parent=None):
@@ -71,12 +73,16 @@ class ScraperWindow(QtGui.QMainWindow):
         for motor in [self.first_motor, self.second_motor, self.gap_motor, self.offset_motor]:
             try:
                 motor.abort()
+                motor.axs()
             except:
                 exception_infos.append(sys.exc_info())
 
         if len(exception_infos) > 0:
-            print 'oups, some exceptions aborting motions'
-            print exception_infos
+            for exc_info in exception_infos:
+                msgbox = TaurusMessageBox(parent=self)
+                msgbox.setError(*exc_info)
+                msgbox.show()
+
 
 LT02_SCRH_MODELS = {}
 LT02_SCRH_MODELS['SCRAPER_NAME'] = 'Horizontal Scraper - Diagnostics Line'
@@ -151,23 +157,31 @@ TEST_MODELS['MOTOR_LABEL_NAMES'] = {'gc_ipap1':'Upper Jaw', 'gc_ipap2':'Lower Ja
 TEST_MODELS['FORM_EXTRA_MODELS'] = ['gc_ipap1/dialposition','gc_ipap2/dialposition','gc_hgap/position','gc_hoffset/position']
 
 if __name__ == "__main__":
-    usage = '\n\nUse as argument one of the following scrapers:\n\t\tlt02scrh lt01scrv lt01scrh srscrv or srscrh\n'
-    if len(sys.argv) != 2:
-        print usage
-        sys.exit(-1)
-
+    usage = '\n\nUse as argument one of the following scrapers:\n\t\tlt02-scrh lt01-scrv lt01-scrh sr-scrv or sr-scrh\n'
     app = QtGui.QApplication(sys.argv)
 
-    scraper = sys.argv[1]
-    if scraper.upper() == 'LT02SCRH':
+    scraper = None
+    if len(sys.argv) == 2:
+        scraper = sys.argv[1]
+
+    valid_scrapers = ('LT02-SCRH','LT01-SCRV','LT01-SCRH','SR-SCRV','SR-SCRH')
+    if (scraper is None) or (scraper.upper() not in valid_scrapers):
+        scraper, ok = QtGui.QInputDialog.getItem(None, "Choose scraper", "Scrapers", valid_scrapers)
+        if not ok:
+            sys.exit(-1)
+        else:
+            scraper = str(scraper)
+
+
+    if scraper.upper() == 'LT02-SCRH':
         window = ScraperWindow(LT02_SCRH_MODELS)
-    elif scraper.upper() == 'LT01SCRH':
+    elif scraper.upper() == 'LT01-SCRH':
         window = ScraperWindow(LT01_SCRH_MODELS)
-    elif scraper.upper() == 'LT01SCRV':
+    elif scraper.upper() == 'LT01-SCRV':
         window = ScraperWindow(LT01_SCRV_MODELS)
-    elif scraper.upper() == 'SRSCRH':
+    elif scraper.upper() == 'SR-SCRH':
         window = ScraperWindow(SR_SCRH_MODELS)
-    elif scraper.upper() == 'SRSCRV':
+    elif scraper.upper() == 'SR-SCRV':
         window = ScraperWindow(SR_SCRV_MODELS)
     elif scraper.upper() == 'TEST':
         window = ScraperWindow(TEST_MODELS)
