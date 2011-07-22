@@ -73,7 +73,6 @@ class ScraperWindow(QtGui.QMainWindow):
         for motor in [self.first_motor, self.second_motor, self.gap_motor, self.offset_motor]:
             try:
                 motor.abort()
-                motor.axs()
             except:
                 exception_infos.append(sys.exc_info())
 
