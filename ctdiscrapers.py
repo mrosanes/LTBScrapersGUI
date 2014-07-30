@@ -44,14 +44,17 @@ class ScraperWindow(QtGui.QMainWindow):
         ### Ubaldo also requests to change labels to something more intuitive: Upper/Lower Jaw, and Left/Right Jaw
         for motor_name in [self.first_motor_name, self.second_motor_name, self.gap_motor_name, self.offset_motor_name]:
             motor_tv_widget = self.ui.form.getItemByModel(motor_name)
-            motor_pms = motor_tv_widget.customWidget()
-            motor_pms.toggleHideAll()
-            motor_pms.toggleMoveAbsolute(True)
-            motor_pms.toggleMoveRelative(True)
+            motor_pms = motor_tv_widget.labelWidget().lbl_alias
+#             motor_pms.toggleHideAll()
+#             motor_pms.toggleMoveAbsolute(True)
+#             motor_pms.toggleMoveRelative(True)
+# 
+            #pms_label = motor_pms.taurus_value.labelWidget()
+            #pms_label.setFgRole('none')
+            #pms_label.setPrefixText(self.label_names[motor_name])
+            motor_pms.setFgRole('none')
+            motor_pms.setPrefixText(self.label_names[motor_name])
 
-            pms_label = motor_pms.taurus_value.labelWidget()
-            pms_label.setFgRole('none')
-            pms_label.setPrefixText(self.label_names[motor_name])
 
     def sizeHint(self):
         return QtCore.QSize(650,500)
@@ -62,10 +65,14 @@ class ScraperWindow(QtGui.QMainWindow):
         self.ui.scraperName.setToolTip(self.scraper_name_tooltip)
         
         # For Pool motors, use the PoolMotorSlim widget
-        from taurus.qt.qtgui.extra_pool import PoolMotorSlim
-        self.ui.form.setCustomWidgetMap({'SimuMotor':PoolMotorSlim,
-                                         'Motor':PoolMotorSlim,
-                                         'PseudoMotor':PoolMotorSlim})
+#         from taurus.qt.qtgui.extra_pool import PoolMotorSlim
+#         self.ui.form.setCustomWidgetMap({'SimuMotor':PoolMotorSlim,
+#                                          'Motor':PoolMotorSlim,
+#                                          'PseudoMotor':PoolMotorSlim})
+        from taurus.qt.qtgui.extra_pool import PoolMotorTV
+        self.ui.form.setCustomWidgetMap({'SimuMotor':PoolMotorTV,
+                                        'Motor':PoolMotorTV,
+                                        'PseudoMotor':PoolMotorTV})
         self.ui.form.setModel(self.form_models)
 
     def abort(self):
@@ -148,12 +155,18 @@ SR_SCRH_MODELS['FORM_EXTRA_MODELS'] = ['sr16/ct/scrv-plc-01/Tin','sr16/ct/scrv-p
 TEST_MODELS = {}
 TEST_MODELS['SCRAPER_NAME'] = 'Test scraper name\nTest description'
 TEST_MODELS['SCRAPER_NAME_TOOLTIP'] = 'Just a description of the device'
-TEST_MODELS['FIRST_MOTOR'] = 'gc_ipap1'
-TEST_MODELS['SECOND_MOTOR'] = 'gc_ipap2'
-TEST_MODELS['GAP'] = 'gc_hgap'
-TEST_MODELS['OFFSET'] = 'gc_hoffset'
-TEST_MODELS['MOTOR_LABEL_NAMES'] = {'gc_ipap1':'Upper Jaw', 'gc_ipap2':'Lower Jaw', 'gc_hgap':'Gap', 'gc_hoffset':'Offset'}
-TEST_MODELS['FORM_EXTRA_MODELS'] = ['gc_ipap1/dialposition','gc_ipap2/dialposition','gc_hgap/position','gc_hoffset/position']
+# TEST_MODELS['FIRST_MOTOR'] = 'gc_ipap1'
+# TEST_MODELS['SECOND_MOTOR'] = 'gc_ipap2'
+# TEST_MODELS['GAP'] = 'gc_hgap'
+# TEST_MODELS['OFFSET'] = 'gc_hoffset'
+# TEST_MODELS['MOTOR_LABEL_NAMES'] = {'gc_ipap1':'Upper Jaw', 'gc_ipap2':'Lower Jaw', 'gc_hgap':'Gap', 'gc_hoffset':'Offset'}
+# TEST_MODELS['FORM_EXTRA_MODELS'] = ['gc_ipap1/dialposition','gc_ipap2/dialposition','gc_hgap/position','gc_hoffset/position']
+TEST_MODELS['FIRST_MOTOR'] = 'gcdmot1'
+TEST_MODELS['SECOND_MOTOR'] = 'gcdmot2'
+TEST_MODELS['GAP'] = 'gcs1g'
+TEST_MODELS['OFFSET'] = 'gcs1o'
+TEST_MODELS['MOTOR_LABEL_NAMES'] = {'gcdmot1':'Upper Jaw', 'gcdmot2':'Lower Jaw','gcs1g':'Gap','gcs1o':'Offset'}
+TEST_MODELS['FORM_EXTRA_MODELS'] = ['gcdmot1/position','gcdmot2/position','gcs1g/position','gcs1o/position']
 
 if __name__ == "__main__":
     usage = '\n\nUse as argument one of the following scrapers:\n\t\tlt02-scrh lt01-scrv lt01-scrh sr-scrv or sr-scrh\n'
@@ -164,7 +177,7 @@ if __name__ == "__main__":
         scraper = sys.argv[1]
 
     valid_scrapers = ('LT02-SCRH','LT01-SCRV','LT01-SCRH','SR-SCRV','SR-SCRH')
-    if (scraper is None) or (scraper.upper() not in valid_scrapers):
+    if (scraper is None) or (scraper.upper() not in valid_scrapers) and scrapper != 'TEST':
         scraper, ok = QtGui.QInputDialog.getItem(None, "Choose scraper", "Scrapers", valid_scrapers)
         if not ok:
             sys.exit(-1)
