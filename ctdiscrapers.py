@@ -137,7 +137,16 @@ SR_SCRV_MODELS['MOTOR_LABEL_NAMES'] = {'motor/sr_ipapfshscrapers_ctrl/3':'Upper 
                                        'motor/sr_ipapfshscrapers_ctrl/4':'Lower Jaw',
                                        'pm/sr_vslit_ctrl/1':'Gap',
                                        'pm/sr_vslit_ctrl/2':'Offset'}
-SR_SCRV_MODELS['FORM_EXTRA_MODELS'] = ['sr16/ct/scrv-plc-01/Tin','sr16/ct/scrv-plc-01/Tup','sr16/ct/scrv-plc-01/Tdown','sr16/ct/scrv-plc-01/FM_VECA']
+# 20170118 CS-1369: the plc with those signals has change
+# SR_SCRV_MODELS['FORM_EXTRA_MODELS'] = ['sr16/ct/scrv-plc-01/Tin',
+#                                        'sr16/ct/scrv-plc-01/Tup',
+#                                        'sr16/ct/scrv-plc-01/Tdown',
+#                                        'sr16/ct/scrv-plc-01/FM_VECA']
+SR_SCRV_MODELS['FORM_EXTRA_MODELS'] = \
+    ['BUILDING/EPS/PLC-02/di_scrco_s16_01_tin',
+     'BUILDING/EPS/PLC-02/di_scrco_s16_01_tup',
+     'BUILDING/EPS/PLC-02/di_scrco_s16_01_tdown',
+     'BUILDING/EPS/PLC-02/di_scrco_s16_01_veca_af']
 
 SR_SCRH_MODELS = {}
 SR_SCRH_MODELS['SCRAPER_NAME'] = 'Horizontal Scraper\nInjection Straight'
@@ -150,7 +159,16 @@ SR_SCRH_MODELS['MOTOR_LABEL_NAMES'] = {'motor/sr_ipapfshscrapers_ctrl/5':'Left J
                                        'motor/sr_ipapfshscrapers_ctrl/6':'Right Jaw',
                                        'pm/sr_hslit_ctrl/1':'Gap',
                                        'pm/sr_hslit_ctrl/2':'Offset'}
-SR_SCRH_MODELS['FORM_EXTRA_MODELS'] = ['sr16/ct/scrv-plc-01/Tin','sr16/ct/scrv-plc-01/Tleft','sr16/ct/scrv-plc-01/Tright','sr16/ct/scrv-plc-01/FM_HOCA']
+# 20170118 CS-1369: the plc with those signals has change
+# SR_SCRH_MODELS['FORM_EXTRA_MODELS'] = ['sr16/ct/scrv-plc-01/Tin',
+#                                        'sr16/ct/scrv-plc-01/Tleft',
+#                                        'sr16/ct/scrv-plc-01/Tright',
+#                                        'sr16/ct/scrv-plc-01/FM_HOCA']
+SR_SCRH_MODELS['FORM_EXTRA_MODELS'] = \
+    ['BUILDING/EPS/PLC-02/di_scrco_s16_01_tin',
+     'BUILDING/EPS/PLC-02/di_scrco_s16_01_tleft',
+     'BUILDING/EPS/PLC-02/di_scrco_s16_01_tright',
+     'BUILDING/EPS/PLC-02/di_scrco_s16_01_hoca_af']
 
 TEST_MODELS = {}
 TEST_MODELS['SCRAPER_NAME'] = 'Test scraper name\nTest description'
