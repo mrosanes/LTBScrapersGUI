@@ -24,21 +24,27 @@
 
 
 import sys
-from PyQt4 import QtGui,QtCore
-
-from ui_scrapersform import Ui_ScraperForm
-import taurus
 import optparse
+
+import taurus
+from taurus.external.qt import QtCore, QtGui, uic
 from taurus.qt.qtgui.dialog import TaurusMessageBox
+
+import scrapers_rc
+
 
 class ScraperWindow(QtGui.QMainWindow):
     def __init__(self, models, parent=None):
         QtGui.QMainWindow.__init__(self, parent)
 
         self.w = QtGui.QWidget()
-        self.ui = Ui_ScraperForm()
-        self.ui.setupUi(self.w)
-
+        
+        # Get graphical information
+        uipath = os.path.join(os.path.dirname(__file__),
+                        "ui",
+                        "scrapersform.ui")
+        self.ui = uic.loadUi(uipath, self.w)
+        
         self.setCentralWidget(self.w)    
 
         self.scraper_name = models['SCRAPER_NAME']
