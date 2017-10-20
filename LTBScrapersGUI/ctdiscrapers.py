@@ -5,7 +5,7 @@
 # This file is part of the Linac To Booster Scrapers GUI
 #
 # Copyright (C) 2008 CELLS / ALBA Synchrotron, Bellaterra, Spain
-# Author: Guifré Cuní
+# Author: Guifre Cuni
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

@@ -18,7 +18,7 @@
 #
 # ##### END GPL LICENSE BLOCK #####
 
-__author__ = "Guifré Cuní"
+__author__ = "Guifre Cuni"
 __copyright__ = "Copyright 2015, CELLS / ALBA Synchrotron"
 __license__ = "GPLv3+"
 
@@ -33,7 +33,7 @@ setup(
     name="LTBScrapersGUI",
     license=__license__, 
     version=__version,    
-    author="Guifré Cuní",
+    author="Guifre Cuni",
     author_email="gcuni@cells.es",
     maintainer='ct4',
     maintainer_email='ct4@cells.es',
