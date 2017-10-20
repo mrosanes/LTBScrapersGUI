@@ -216,7 +216,9 @@ TEST_MODELS['OFFSET'] = 'gcs1o'
 TEST_MODELS['MOTOR_LABEL_NAMES'] = {'gcdmot1':'Upper Jaw', 'gcdmot2':'Lower Jaw','gcs1g':'Gap','gcs1o':'Offset'}
 TEST_MODELS['FORM_EXTRA_MODELS'] = ['gcdmot1/position','gcdmot2/position','gcs1g/position','gcs1o/position']
 
-if __name__ == "__main__":
+    
+def main():
+    
     usage = '\n\nUse as argument one of the following scrapers:\n\t\tlt02-scrh lt01-scrv lt01-scrh sr-scrv or sr-scrh\n'
     app = QtGui.QApplication(sys.argv)
 
@@ -252,3 +254,6 @@ if __name__ == "__main__":
     window.setWindowTitle(window.scraper_name.replace("\n"," "))
     window.show()
     sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
