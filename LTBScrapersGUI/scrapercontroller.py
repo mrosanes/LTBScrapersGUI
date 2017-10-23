@@ -23,7 +23,7 @@
 ###############################################################################
 
 
-import tau.core
+from taurus.core.taurusmanager import TaurusManager
 
 from PyQt4 import QtCore
 
@@ -34,7 +34,7 @@ class ScraperController():
                  ,mot1_in,mot1_in_b,mot1_out,mot1_out_b,mot1_abs,mot1_abs_b
                  ,mot2_in,mot2_in_b,mot2_out,mot2_out_b,mot2_abs,mot2_abs_b):
         
-        manager = tau.core.TauManager()
+        manager = TaurusManager()
         factory = manager.getFactory("tango")()
         self.mot1 = factory.getDevice(dev_mot1)
         self.mot2 = factory.getDevice(dev_mot2)
