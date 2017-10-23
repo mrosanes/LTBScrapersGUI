@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/" >
+    <qresource prefix="/icons" >
         <file>icons/ALBA_Logo.png</file>
     </qresource>
 </RCC>
