@@ -100,7 +100,7 @@ class ScraperWindow(QtGui.QMainWindow):
 #         self.ui.form.setCustomWidgetMap({'SimuMotor':PoolMotorSlim,
 #                                          'Motor':PoolMotorSlim,
 #                                          'PseudoMotor':PoolMotorSlim})
-        from taurus.qt.qtgui.extra_pool import PoolMotorTV
+        from sardana.taurus.qt.qtgui.extra_pool import PoolMotorTV
         self.ui.form.setCustomWidgetMap({'SimuMotor':PoolMotorTV,
                                         'Motor':PoolMotorTV,
                                         'PseudoMotor':PoolMotorTV})
